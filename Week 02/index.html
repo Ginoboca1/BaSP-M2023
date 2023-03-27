@@ -48,14 +48,15 @@
       <ul>
         <li>
           <img src="img/mail.svg" />
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            >Info@Rocket.com</a
-          >
+          <a href="mailto:Info@Rocket.com">Info@Rocket.com</a>
         </li>
 
         <li>
           <img src="img/house-door.svg" />
-          <a>Rosario, Argentina.</a>
+          <a
+            href="https://www.google.com/maps/@-32.913076,-60.8027956,15z?authuser=0"
+            >Rosario, Argentina.</a
+          >
         </li>
 
         <li>
@@ -82,7 +83,7 @@
       </section>
 
       <section>
-        <h2>HOW CAN HELP YOU</h2>
+        <h2>HOW CAN WE HELP YOU</h2>
         <a href="#">turn reservation</a>
         <a href="#">membership managment</a>
         <a href="#">agent display</a>
@@ -94,53 +95,41 @@
         <h2>CONTACT</h2>
         <img src="img/mail.svg" />
         <form>
-          <div class="form-field">
-            <label>Name</label>
-            <input type="text" placeholder="Insert your name" required />
-          </div>
-          <div class="form-field">
-            <label>Surname</label>
-            <input type="text" placeholder="Insert your name" required />
-          </div>
-          <div class="form-field">
-            <label>E-mail</label>
-            <input type="text" placeholder="Insert your E-mail" required />
-          </div>
+          <label>Name</label>
+          <input type="text" placeholder="Insert your name" required />
+          <label>Surname</label>
+          <input type="text" placeholder="Insert your name" required />
+          <label>E-mail</label>
+          <input type="text" placeholder="Insert your E-mail" required />
 
           <h4>Reason for contact</h4>
-          <div class="form-field">
-            <label>I want to make a query or suggestion</label>
-            <input
-              type="radio"
-              name="Reason for contact"
-              value="query"
-              required
-            />
-          </div>
-          <div class="form-field">
-            <label>I want to make a claim</label>
-            <input
-              type="radio"
-              name="Reason for contact"
-              value="query"
-              required
-            />
-          </div>
-          <div class="form-field">
-            <label>I want to know the memberships and costs</label>
-            <input
-              type="radio"
-              name="Reason for contact"
-              value="query"
-              required
-            />
-          </div>
+          <label>I want to make a query or suggestion</label>
+          <input
+            type="radio"
+            name="Reason for contact"
+            value="query"
+            required
+          />
+          <label>I want to make a claim</label>
+          <input
+            type="radio"
+            name="Reason for contact"
+            value="query"
+            required
+          />
+          <label>I want to know the memberships and costs</label>
+          <input
+            type="radio"
+            name="Reason for contact"
+            value="query"
+            required
+          />
 
           <h4>Message</h4>
           <textarea placeholder="type your message here"></textarea>
 
           <button type="submit">Send Message</button>
-          <button>Reset</button>
+          <button type="reset">Reset</button>
         </form>
       </section>
 
