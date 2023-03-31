@@ -1,0 +1,43 @@
+/*Globals*/
+
+:root{
+    --Green:#AACE9B;
+    --Blue:#373867;
+    --Grey:#EBECF0;
+}
+
+img{
+    max-width:1094px;
+    max-height:765px;
+}
+
+h1,h2,h3,h4{
+    font-weight:700;
+    font-size:40px;
+    line-height: 47px;
+}
+
+h5{
+    font-size:30px;
+}
+
+p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--Blue);
+}
+
+a{
+    font-size:20px;
+    color: var(--Blue);
+    text-decoration:none;
+    font-weight:600;
+    line-height:23.44px;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding:30px;
+}
