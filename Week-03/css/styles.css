@@ -16,14 +16,7 @@ h4 {
   color: var(--Blue);
 }
 
-h5 {
-  font-size: 30px;
-  line-height: 35px;
-  color: var(--Blue);
-  font-weight: 700;
-}
-
-p, label {
+p, label, a {
   font-weight: 600;
   font-size: 20px;
   line-height: 23px;
@@ -31,11 +24,7 @@ p, label {
 }
 
 a {
-  font-size: 20px;
-  color: var(--Blue);
   text-decoration: none;
-  font-weight: 600;
-  line-height: 23.44px;
 }
 
 body {
@@ -52,17 +41,17 @@ body {
   top: 0;
   background-color: var(--Green);
   text-align: center;
-  padding-top: 20px;
+  
 }
 
 .logo-rr1 {
   width: 95px;
   height: 140px;
-  margin-bottom: 20px;
+  margin: 15px 0 0 0;
 }
 
 ul {
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 
 .nav-item {
@@ -82,6 +71,10 @@ nav ul li:first-child a {
 
 .contact-list li a {
   text-shadow: 0 3px 4px grey;
+}
+
+.sidebar h2{
+  font-size:30px;
 }
 
 /*PAGE CONTENT*/
@@ -115,12 +108,14 @@ header img {
   margin: 50px auto;
 }
 
-.section-one {
+/*HEALTH SECTION*/
+
+.section-health {
   position: relative;
   height: 700px;
 }
 
-.section-one img {
+.section-health img {
   width: 53%;
   position: absolute;
   right: 0;
@@ -131,19 +126,20 @@ header img {
   width: 47%;
 }
 
-.section-two {
-  border: solid red 1px;
+/*HELP SECTION*/
+
+.section-help {
   text-align: center;
   padding: 20px;
 }
 
-.section-two h2 {
+.section-help h2 {
   padding-top: 30px;
   color: var(--Grey);
 }
 
 
-.section-two a {
+.section-help a {
   width: 20%;
   height: 30px;
 }
@@ -190,12 +186,64 @@ header img {
   display:inline;
 }
 
+form textarea{
+  width:500px;
+  height:300px;
+}
 
+
+form button[type=submit]{
+  display:block;
+  background-color:var(--Green);
+  border:none;
+  margin:10px 0;
+  width:100px;
+  height:40px;
+  border-radius:5px;
+}
+
+form button[type=reset]{
+  border:none;
+  display:inline;
+  width:100px;
+  height:40px;
+  border-radius:5px;
+}
+
+/*HISTORY SECTION*/
+
+.section-history{
+  border:solid red 1px;
+  background-image:url('../img/history-section.jpg');
+  height:700px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+
+.section-image img{
+  width:100%;
+}
+
+
+.section-history p{
+  width:50%;
+  margin: 200px auto;
+  color:white;
+}
+
+/*ACTIVITIES SECTION*/
+
+.section-activities img{
+  width:80px;
+  height:52px;
+}
 
 footer {
   background-color: var(--Blue);
   position: relative;
-  width: 100%;
+  width: 80%;
+  margin-left:20%;
   height: 135px;
 }
 
