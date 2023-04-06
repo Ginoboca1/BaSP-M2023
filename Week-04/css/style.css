@@ -1,0 +1,38 @@
+:root {
+  --Green: #aace9b;
+  --Blue: #373867;
+  --Grey: #ebecf0;
+  --LightGrey: #f8f6f7;
+  --DarkBlue: #171642;
+  --RadioColor: #34636e;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--Blue);
+  text-transform: uppercase;
+}
+
+p,
+label,
+a {
+  font-weight: 600;
+  line-height: 23px;
+  color: var(--Blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
