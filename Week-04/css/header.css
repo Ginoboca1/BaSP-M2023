@@ -1,0 +1,22 @@
+.header{
+    background-color:var(--Blue);
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 0 20px;
+}
+
+.logo-rr2{
+    display:none;
+}
+
+.burguer-menu{
+    width:35px;
+    height:35px
+}
+
+.header h1 {
+    color:var(--Green);
+    font-size:30px;
+}
