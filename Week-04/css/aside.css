@@ -8,13 +8,12 @@
   display:none;
   flex-direction: column;
   align-items:center;
-  justify-content: flex-end;
   gap: 40px;
 }
 
 
 .burguer-menu-nav {
-  align-self: baseline;
+  align-self: flex-start;
 }
 
 .logo-rr1 {
@@ -27,6 +26,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom:140px;
 }
 
 .icon {
@@ -58,16 +58,12 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 20px;
 }
 
-.contact {
+.contact, .other-options {
   display: none;
 }
 
-.other-options {
-  display: none;
-}
 
 .social-container-nav {
   align-self: flex-end;
