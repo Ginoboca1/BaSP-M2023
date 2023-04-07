@@ -1,3 +1,78 @@
-.sidebar{
-    display:none;
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  display:none;
+  flex-direction: column;
+  align-items:center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+
+.burguer-menu-nav {
+  align-self: baseline;
+}
+
+.logo-rr1 {
+  width: 67px;
+  height: 100px;
+  margin-top:110px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nav-item {
+  background-color: var(--Grey);
+  width: 169px;
+  height: 69px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.contact {
+  display: none;
+}
+
+.other-options {
+  display: none;
+}
+
+.social-container-nav {
+  align-self: flex-end;
+}
+
+.social-container-nav img {
+  width: 47px;
 }
