@@ -1,0 +1,17 @@
+footer {
+  background-color: var(--Blue);
+  height: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer p {
+  font-size: 10px;
+  color: black;
+}
+
+.social-container img {
+  width: 30px;
+  height: 28px;
+}
