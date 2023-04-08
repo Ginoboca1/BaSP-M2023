@@ -8,7 +8,7 @@
 }
 
 h1, h2, h3{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--Blue);
   text-transform: uppercase;
@@ -16,6 +16,9 @@ h1, h2, h3{
 
 h4{
   font-size:1.25rem;
+  margin-bottom:0.8rem;
+  color: var(--Blue);
+  font-weight:700;
 }
 
 
@@ -39,3 +42,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media only screen and (min-width: 480px){
+  body{
+    display:flex;
+  }
+}

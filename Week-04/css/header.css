@@ -1,6 +1,5 @@
 .header{
     background-color:var(--Blue);
-    height:58px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -18,5 +17,24 @@
 
 .header h1 {
     color:var(--Green);
-    margin: auto;
+    margin:0.7rem auto;
+}
+
+@media only screen and (min-width: 480px){
+    .header{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .burguer-menu{
+        display:none;
+    }
+    .logo-rr2{
+        display:block;
+        width:9rem;
+    }
+
+    .header h1{
+        font-size:1rem;
+    }
 }

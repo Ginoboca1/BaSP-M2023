@@ -1,16 +1,21 @@
 footer {
   background-color: var(--Blue);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 footer p {
   font-size: 5px;
   color: black;
+  margin-left:0.5rem;
+}
+
+.social-container{
+  margin-right:0.5rem;
 }
 
 .social-container img {
-  width: 30px;
-  height: 28px;
+  width: 1.8rem;
+  height: 1.75rem;
 }
