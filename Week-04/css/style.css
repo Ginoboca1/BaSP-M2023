@@ -7,7 +7,9 @@
   --RadioColor: #34636e;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--Blue);
@@ -15,12 +17,11 @@ h1, h2, h3 {
 }
 
 h4 {
-  font-size:1.25rem;
-  margin-bottom:0.8rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
   color: var(--Blue);
-  font-weight:700;
+  font-weight: 700;
 }
-
 
 p,
 label,
@@ -44,6 +45,6 @@ body {
 
 @media only screen and (min-width: 480px) {
   body {
-    display:flex;
+    display: flex;
   }
 }

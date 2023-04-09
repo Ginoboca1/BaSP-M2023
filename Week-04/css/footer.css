@@ -8,14 +8,32 @@ footer {
 footer p {
   font-size: 5px;
   color: black;
-  margin-left:0.5rem;
+  margin-left: 0.5rem;
 }
 
 .social-container {
-  margin-right:0.5rem;
+  margin-right: 0.5rem;
 }
 
 .social-container img {
   width: 1.8rem;
   height: 1.75rem;
+}
+
+@media only screen and (min-width: 1024px){
+  footer{
+    justify-content:space-around;
+  }
+  footer p{
+    font-size:13px;
+  }
+
+  .social-container {
+    display:flex;
+    gap:20px;
+  }
+  .social-container img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }
