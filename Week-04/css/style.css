@@ -7,14 +7,14 @@
   --RadioColor: #34636e;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--Blue);
   text-transform: uppercase;
 }
 
-h4{
+h4 {
   font-size:1.25rem;
   margin-bottom:0.8rem;
   color: var(--Blue);
@@ -42,8 +42,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-@media only screen and (min-width: 480px){
-  body{
+@media only screen and (min-width: 480px) {
+  body {
     display:flex;
   }
 }

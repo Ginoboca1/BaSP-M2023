@@ -123,14 +123,14 @@
         <div class="line"></div>
 
         <section class="section section-help">
-          <div class="background">
+          <div class="how-can-we-help-you-background">
             <h2>how can we help you</h2>
             <ul>
               <li class="help-item list">
                 <p>turn reservation</p>
               </li>
               <li class="help-item list">
-                <p href="#">membership managment</p>
+                <p>membership managment</p>
               </li>
               <li class="help-item list">
                 <p>agent display</p>
@@ -179,29 +179,32 @@
               <div class="form-field">
                 <input
                   type="radio"
+                  id="suggestion"
                   name="Reason for contact"
                   value="query"
                   required
                 />
-                <label>I want to make a query or suggestion</label>
+                <label for="suggestion">I want to make a query or suggestion</label>
               </div>
               <div class="form-field">
                 <input
                   type="radio"
+                  id="claim"
                   name="Reason for contact"
                   value="query"
                   required
                 />
-                <label>I want to make a claim</label>
+                <label for="claim">I want to make a claim</label>
               </div>
               <div class="form-field">
                 <input
                   type="radio"
+                  id="membership"
                   name="Reason for contact"
                   value="query"
                   required
                 />
-                <label>I want to know the memberships and costs</label>
+                <label for="membership">I want to know the memberships and costs</label>
               </div>
             </section>
             <label class="message" for="message">Message</label>

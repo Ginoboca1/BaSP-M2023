@@ -1,4 +1,4 @@
-.header{
+.header {
     background-color:var(--Blue);
     display:flex;
     align-items:center;
@@ -6,11 +6,11 @@
     padding: 0 20px;
 }
 
-.logo-rr2{
+.logo-rr2 {
     display:none;
 }
 
-.burguer-menu{
+.burguer-menu {
     width:35px;
     height:35px
 }
@@ -20,21 +20,21 @@
     margin:0.7rem auto;
 }
 
-@media only screen and (min-width: 480px){
-    .header{
+@media only screen and (min-width: 480px) {
+    .header {
         display:flex;
         justify-content:center;
         align-items:center;
     }
-    .burguer-menu{
+    .burguer-menu {
         display:none;
     }
-    .logo-rr2{
+    .logo-rr2 {
         display:block;
         width:9rem;
     }
 
-    .header h1{
+    .header h1 {
         font-size:1rem;
     }
 }

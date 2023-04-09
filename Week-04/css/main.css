@@ -7,25 +7,25 @@
 }
 
 .section-health {
-  margin-top: 50px;
+  margin-top: 3.1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.health-container{
+.health-container {
   display:flex;
   flex-direction:column-reverse;
   gap:20px;
 }
 
 .section-health h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
-.section-health p{
-  font-size:12px;
+.section-health p {
+  font-size:0.75rem;
   text-shadow: #000000 1px 0 10px;
   font-weight:300;
 }
@@ -36,7 +36,7 @@
 
 .section-help {
   width: 100%;
-  height: 684px;
+  padding:10rem 0;
   background-image: url("../img/section-02.jpg");
   background-size: fit;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@
   justify-content:center;
 }
 
-.background {
+.how-can-we-help-you-background {
   text-align: center;
   width: 90%;
   height:100%;
@@ -68,7 +68,7 @@
   background-color: var(--Grey);
   width: 14.1rem;
   height: 4.3rem;
-  margin-bottom:20px;
+  margin-bottom:1.25rem;
   text-align:center;
   border-radius:5px;
   display:flex;
@@ -79,8 +79,8 @@
 }
 
 .section-form h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
@@ -94,7 +94,7 @@ form {
 .form-field {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top:1.2rem;
 }
 
 .form-field-text input[type="text"] {
@@ -107,8 +107,7 @@ form {
 }
 
 .reason-for-contact h3 {
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin: 0 0 1.2rem 1.2rem;
   font-size: 14px;
 }
 
@@ -119,12 +118,12 @@ form {
 
 form textarea {
   width: 90%;
-  height: 100px;
+  height: 6.25rem;
   border-radius: 10px;
   border: none;
   background-color: var(--LightGrey);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.6rem;
   outline: none;
 }
 
@@ -148,7 +147,7 @@ form button[type="submit"] {
   background-color: var(--Green);
   margin-bottom: 10px;
   display: inline;
-  width: 163px;
+  width: 10.1rem;
 }
 
 form button[type="reset"] {
@@ -174,46 +173,46 @@ form button[type="reset"] {
   margin: 0 auto;
 }
 
-.section-activities{
+.section-activities {
   display:flex;
   flex-direction:column;
   gap:1.25rem;
   margin-bottom:3.1rem;
 }
 
-.activities-area h3{
+.activities-area h3 {
   text-align:center;
   margin-bottom:1.25rem;
 }
 
-.activities-list{
+.activities-list {
   width:50%;
   margin:0 auto;
 }
 
-.activities-list li{
+.activities-list li {
   display:flex;
   flex-direction:row;
   align-items:center;
   gap:10px;
 }
 
-.activities-list img{
-    width:50px;
+.activities-list img {
+    width:3.1rem;
 }
 
-.membership-area{
+.membership-area {
   display:flex;
   flex-direction:column;
   gap:20px;
 }
 
-.membership-area h3{
+.membership-area h3 {
   text-align:center;
   margin-bottom:1.25rem;
 }
 
-.membership-test{
+.membership-test {
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -222,15 +221,15 @@ form button[type="reset"] {
 }
 
 
-@media only screen and (min-width: 480px){
-  .main-content{
+@media only screen and (min-width: 480px) {
+  .main-content {
     width:90%;
   }
-  .activities-list{
+  .activities-list {
     width:50%;
     margin:0 auto;
   }
-  .section-health p{
+  .section-health p {
     font-weight:700;
     text-shadow:none;
   }
