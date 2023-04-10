@@ -316,6 +316,18 @@ form button[type="reset"] {
 }
 
 @media only screen and (min-width: 1024px){
+  .section-health{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .section-health h2{
+    text-align:start;
+  }
+
+  .section-health img{
+    height:400px;
+  }
 
   .main-content{
     width:90%;
@@ -332,6 +344,13 @@ form button[type="reset"] {
   .section-form h2{
     text-align:left;
     margin-left:2%;
+  }
+
+  .line{
+    width:80%;
+    height:3px;
+    background-color:var(--Blue);
+    margin: 2rem auto;
   }
 
   .form-area{
@@ -359,7 +378,7 @@ form button[type="reset"] {
   }
 
   .background-container{
-    height:765px;
+    height:40rem;
   }
 
   .section-activities{
@@ -383,5 +402,12 @@ form button[type="reset"] {
 
   .membership-test{
     gap:30px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .section-health{
+    display:flex;
+    flex-direction:column;
   }
 }
