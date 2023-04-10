@@ -20,17 +20,18 @@ footer p {
   height: 1.75rem;
 }
 
-@media only screen and (min-width: 1024px){
-  footer{
-    justify-content:space-around;
+@media only screen and (min-width: 1024px) {
+  footer {
+    justify-content: space-between;
+    padding: 0 20px;
   }
-  footer p{
-    font-size:13px;
+  footer p {
+    font-size: 13px;
   }
 
   .social-container {
-    display:flex;
-    gap:20px;
+    display: flex;
+    gap: 10px;
   }
   .social-container img {
     width: 2.75rem;

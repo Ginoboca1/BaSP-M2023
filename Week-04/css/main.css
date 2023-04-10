@@ -115,6 +115,7 @@ form {
 .reason-for-contact h3 {
   margin: 0 0 1.2rem 1.2rem;
   font-size: 14px;
+  text-transform: none;
 }
 
 .form-field {
@@ -235,8 +236,8 @@ form button[type="reset"] {
   margin-bottom: 1.25rem;
 }
 
-.black-title{
-  color:black;
+.black-title {
+  color: black;
 }
 
 .membership-test {
@@ -250,6 +251,12 @@ form button[type="reset"] {
 @media only screen and (min-width: 480px) {
   .main-content {
     width: 100%;
+  }
+
+  .section-health {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
   }
   .activities-list {
     width: 50%;
@@ -277,137 +284,152 @@ form button[type="reset"] {
     width: 80%;
   }
 
-  .functional{
-    display:inline-block;
+  .background-container {
+    background-image: url("../img/history-blur.png");
+    background-repeat: none;
+    background-position: center;
+  }
+
+  .functional {
+    display: inline-block;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .section-health{
-    display:flex;
-    flex-direction:row;
+  .section-health {
+    display: flex;
+    flex-direction: row;
   }
-
-  .health-container{
-    display:flex;
-    flex-direction:row;
-    height:50%;
+  .health-container {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
   }
   .section-health h2 {
     margin-bottom: 1.25rem;
   }
-  
+
   .section-health p {
     font-size: 0.75rem;
-    height:100px;
-  }
-  
-  .section-health img {
-    width: 60%;
+    max-height: 100%;
   }
 
-  .list-help-item{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+  .section-health img {
+    max-width: 60%;
+    max-height: 20rem;
+  }
+
+  .background-container {
+    background-image: url("../img/history-blur.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .list-help-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 }
 
-@media only screen and (min-width: 1024px){
-  .section-health{
-    display:flex;
-    flex-direction:column;
+@media only screen and (min-width: 1024px) {
+  .section-health {
+    display: flex;
+    flex-direction: column;
   }
 
-  .section-health h2{
-    text-align:start;
+  .section-health h2 {
+    text-align: start;
   }
 
-  .section-health img{
-    height:400px;
+  .section-health img {
+    height: 400px;
   }
 
-  .main-content{
-    width:90%;
+  .main-content {
+    width: 90%;
   }
-  .list-help-item{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:50px;
-    max-width:745px;
-  }
-
-  .section-form h2{
-    text-align:left;
-    margin-left:2%;
+  .list-help-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 745px;
   }
 
-  .line{
-    width:80%;
-    height:3px;
-    background-color:var(--Blue);
+  .section-form h2 {
+    text-align: left;
+    margin-left: 2%;
+  }
+
+  .line {
+    width: 80%;
+    height: 3px;
+    background-color: var(--Blue);
     margin: 2rem auto;
   }
 
-  .form-area{
-    width:100%;
-    margin-left:5%;
+  .form-area {
+    width: 100%;
+    margin-left: 5%;
   }
 
-  .reason-for-contact{
-    width:100%;
+  .reason-for-contact {
+    width: 100%;
   }
 
-  .reason-for-contact h3{
-    font-size:19px;
+  .reason-for-contact h3 {
+    font-size: 19px;
   }
 
-  .message{
-    width:100%;
-    margin-left:6%;
-    font-size:19px;
+  .message {
+    width: 100%;
+    margin-left: 6%;
+    font-size: 19px;
   }
 
-  form textarea{
-    width:70%;
+  form textarea {
+    width: 70%;
     margin-right: 25%;
   }
 
-  .background-container{
-    height:40rem;
+  .background-container {
+    height: 40rem;
+    background-image: url("../img/history-section.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .section-activities{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
+  .section-activities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
-  .activities-list li{
-    gap:30px;
+  .activities-list li {
+    gap: 30px;
   }
 
-  .activities-area{
-    width:50%;
+  .activities-area {
+    width: 50%;
   }
 
-  .membership-area{
-    width:50%;
+  .membership-area {
+    width: 50%;
   }
 
-  .membership-test{
-    gap:30px;
+  .membership-test {
+    gap: 30px;
   }
 }
 
-@media only screen and (min-width: 768px){
-  .section-health{
-    display:flex;
-    flex-direction:column;
+@media only screen and (min-width: 768px) {
+  .section-health {
+    display: flex;
+    flex-direction: column;
   }
 }

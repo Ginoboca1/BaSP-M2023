@@ -59,6 +59,7 @@
 .nav-item-blue {
   background-color: var(--Blue);
   color: var(--Grey);
+  font-size: ;
 }
 
 .contact,
@@ -84,11 +85,11 @@
     text-align: center;
   }
 
-  .other-options{
-    display:flex;
-    flex-direction:column;
-    align-items:start;
-    justify-content:center;
+  .other-options {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
   }
 
   .flex-aside {
@@ -108,6 +109,7 @@
   .nav-item {
     width: 4.5rem;
     height: 1.7rem;
+    -webkit-text-stroke: 0.1px green;
   }
 
   .contact {
@@ -117,7 +119,7 @@
   .other-options ul {
     display: flex;
     flex-direction: column;
-    align-items:start;
+    align-items: start;
   }
 
   .sidebar h2 {
@@ -141,30 +143,28 @@
 }
 
 @media screen(min-width:768px) {
-  .sidebar h2{
-    font-size:0.8rem;
+  .sidebar h2 {
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-
-  .flex-aside{
-    gap:20px;
-    margin-top:20px;
+  .flex-aside {
+    gap: 20px;
+    margin-top: 20px;
   }
 
-  .sidebar h2{
-    font-size:1.2rem;
+  .sidebar h2 {
+    font-size: 1.2rem;
   }
 
-
-  .nav-item{
+  .nav-item {
     width: 7rem;
     height: 2.5rem;
     margin-bottom: 1.25rem;
     text-align: center;
     text-transform: uppercase;
-    border: solid 1px var(--Green);
+    border: solid 1px var(--Blue);
   }
 
   .contact {
@@ -173,14 +173,19 @@
     margin-bottom: 1.25rem;
     text-align: center;
     text-transform: uppercase;
-    border: solid 1px var(--Green);
+    border: solid 1px var(--Blue);
   }
 
   .sidebar a {
     font-size: 0.9rem;
   }
 
-  .icon{
-    width:21px;
+  .info-container,
+  .icons-container {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon {
+    width: 21px;
   }
 }
