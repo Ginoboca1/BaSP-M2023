@@ -1,9 +1,9 @@
 .header {
-  background-color: var(--Blue);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  background-color: var(--Blue);
 }
 
 .logo-rr2 {
@@ -16,8 +16,8 @@
 }
 
 .header h1 {
-  color: var(--Green);
   margin: 0.7rem auto;
+  color: var(--Green);
 }
 
 @media only screen and (min-width: 480px) {
@@ -37,7 +37,6 @@
   }
 
   .header h1 {
-    font-size: 1rem;
     margin: 0;
   }
 
@@ -52,10 +51,6 @@
     display: flex;
     justify-content: start;
     height: 100px;
-  }
-
-  .header h1 {
-    font-size: 2rem;
   }
 
   .logo-rr2 {
