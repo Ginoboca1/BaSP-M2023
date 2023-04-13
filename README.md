@@ -14,6 +14,7 @@ Styling the index html page, based in the screenflow  landing page
 Styling the index html page, based in the screenflow landing page using flexbox properties.
 *** if you wanna try the navbar you should delete "display:none" in the aside.css file ***
 
+“BaSP-W05-2023: Add first exercises related to variables and operators.”
 
 [Week-02](https://ginoboca1.github.io/BaSP-M2023/Week-02/index.html).
 [Week-03](https://ginoboca1.github.io/BaSP-M2023/Week-03/index.html).
