@@ -69,4 +69,5 @@ var myUpperStr =
   " " +
   secondWord[0].toUpperCase() +
   secondWord.substring(1).toLowerCase();
+  
 console.log(myUpperStr);
