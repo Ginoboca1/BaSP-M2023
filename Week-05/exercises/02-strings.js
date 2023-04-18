@@ -46,7 +46,7 @@ Encontrar la posición del primer espacio en blanco y guardarla en una variable 
 
 console.log("Exercise 2.e");
 
-var str = "Me gusta la pizza";
+var str = "I like pizza";
 var blinkSpace = str.indexOf(" ");
 
 console.log(blinkSpace);
