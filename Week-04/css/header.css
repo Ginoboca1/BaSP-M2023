@@ -22,15 +22,16 @@
 
 @media only screen and (min-width: 480px) {
   .header {
-    display: flex;
     justify-content: start;
     align-items: center;
     gap: 20px;
-    height: 3rem;
+    padding:20px;
   }
+
   .burguer-menu {
     display: none;
   }
+  
   .logo-rr2 {
     display: block;
     width: 9rem;
@@ -41,19 +42,15 @@
   }
 
   .logo-rr2 {
-    height: 2rem;
-    margin-top: 2vw;
+    height:auto;
+    margin-top: 1vw;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .header {
-    display: flex;
     justify-content: start;
-    height: 100px;
-  }
-
-  .logo-rr2 {
-    margin-bottom: 15px;
+    height: auto;
+    padding:20px;
   }
 }

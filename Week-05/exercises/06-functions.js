@@ -7,9 +7,9 @@ navegador
 
 console.log("Exercise 6.a");
 
-function suma(a, b) {
+var suma = function (a, b) {
   return a + b;
-}
+};
 
 var result = suma(1, 2);
 
@@ -22,13 +22,13 @@ console.log(result);
 
 console.log("Exercise 6.b");
 
-function suma(a, b) {
-  if (typeof a !== "number" && typeof b !== "number") {
+var suma = function (a, b) {
+  if (typeof a !== Number || typeof b !== Number) {
     alert("Uno de los parametros tiene un error");
     return NaN;
   }
   return a + b;
-}
+};
 
 var result = suma("uno", 2);
 
@@ -38,11 +38,15 @@ entero.
 
 console.log("Exercise 6.c");
 
-function validateInteger(num) {
+var validateInteger = function (num) {
   if (num % 1 === 0) {
     return true;
+  } else{
+    return false;
   }
-}
+};
+
+console.log(validateInteger(2.5));
 
 /*Copiar y renombrar la función suma del ejercicio 6b) y agregarle una llamada a la función del ejercicio 6c.
 y que valide que los números sean enteros. En caso que haya decimales mostrar un alert con el error y retornar
@@ -50,7 +54,7 @@ el número convertido a entero (redondeado). */
 
 console.log("Exercise 6.d");
 
-function sumaAndValidate(a, b) {
+var sumaAndValidate = function (a, b) {
   if (typeof a !== "number" && typeof b !== "number") {
     alert("One of them is not a number");
     return NaN;
@@ -65,7 +69,7 @@ function sumaAndValidate(a, b) {
       return Math.round(b);
     }
   }
-}
+};
 
 console.log(sumaAndValidate(2, 2.2));
 
@@ -74,7 +78,7 @@ que todo siga funcionando igual que en el apartado anterior. */
 
 console.log("Exercise 6.e");
 
-function validation(a, b) {
+var validation = function (a, b) {
   if (typeof a !== "number" && typeof b !== "number") {
     alert("One of them is not a number");
     return NaN;
@@ -89,14 +93,14 @@ function validation(a, b) {
       return Math.round(b);
     }
   }
-}
+};
 
-function test(a, b) {
+var test = function (a, b) {
   if (validation(a, b) === true) {
     return a + b;
   } else {
     return validation(a, b);
   }
-}
+};
 
 console.log(test(2, 2.2));

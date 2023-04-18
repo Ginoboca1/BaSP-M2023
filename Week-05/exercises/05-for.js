@@ -45,6 +45,6 @@ console.log("Exercise 5.d");
 var numbers = [];
 
 for (var index = 0; index < 10; index++) {
-  numbers += index;
+  numbers.push(index);
 }
 console.log(numbers);

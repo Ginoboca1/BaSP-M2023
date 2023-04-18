@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 10rem 0;
+  padding: 6rem 0;
   background-image: url("../img/section-02.jpg");
   background-size: fit;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@
   justify-content: center;
   align-items: center;
   width: 14.1rem;
-  height: 4.3rem;
+  min-height:69px;
   margin-bottom: 1.25rem;
   background-color: var(--Grey);
   border-radius: 5px;
@@ -109,16 +109,20 @@
   align-items: center;
 }
 
+.form label{
+  display:flex;
+  align-items:center;
+}
+
 .form-field-text {
   display: flex;
-  flex-direction: row;
   gap: 10px;
   margin-top: 1.2rem;
 }
 
 .form-field-text input[type="text"] {
   width: 175px;
-  height: 27px;
+  padding:10px;
   border-radius: 20px;
   border: solid 1px var(--Blue);
 }
@@ -193,7 +197,7 @@ form textarea {
   align-items: center;
   height: 26.9rem;
   margin-top: 1.25rem;
-  background-image: url("../img/history-section.jpg");
+  background-image: url("../img/history-blur.png");
   background-position: center;
 }
 
@@ -222,7 +226,6 @@ form textarea {
 
 .activities-list li {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -254,7 +257,6 @@ form textarea {
 
 .membership-test {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -270,13 +272,16 @@ form textarea {
     margin: 0 auto;
     margin-top: 20px;
   }
+
   .activities-list {
     width: 50%;
     margin: 0 auto;
   }
+
   .section-health p {
     font-weight: 700;
     text-shadow: none;
+    line-height:23px;
   }
 
   .reason-for-contact {
@@ -305,35 +310,32 @@ form textarea {
   .functional {
     display: inline-block;
   }
+
+  .activities-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:100%;
+    height: 200px;
+  }
+
+  .activities-list li{
+    min-width:0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .section-health {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .health-container {
-    display: flex;
-    flex-direction: row;
-    height: 50%;
-  }
   .section-health h2 {
     margin-bottom: 1.25rem;
   }
 
-  .section-health p {
-    font-size: 0.75rem;
-    max-height: 100%;
-  }
-
   .section-health img {
-    max-width: 60%;
-    max-height: 20rem;
+    width: 28.3rem;
+    height: auto;
+    margin:0 auto;
   }
 
   .background-container {
-    background-image: url("../img/history-blur.png");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -342,6 +344,7 @@ form textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width:80%;
     height: 200px;
   }
 
@@ -364,6 +367,16 @@ form textarea {
     flex-direction: column;
   }
 
+  .health-container {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+  }
+
+  .section-health p {
+    font-size: 0.75rem;
+  }
+
   .section-health h2 {
     text-align: start;
   }
@@ -375,6 +388,7 @@ form textarea {
   .main-content {
     width: 90%;
   }
+
   .list-help-item {
     display: flex;
     flex-direction: row;
@@ -391,8 +405,8 @@ form textarea {
 
   .line {
     margin: 2rem auto;
-    width: 80%;
-    height: 3px;
+    width: 92%;
+    height: 5px;
     background-color: var(--Blue);
   }
 
@@ -409,11 +423,6 @@ form textarea {
     width: 100%;
   }
 
-  /*
-  .reason-for-contact h3 {
-    font-size: 19px;
-  }*/
-
   .message {
     width: 100%;
     margin-left: 6%;
@@ -426,7 +435,7 @@ form textarea {
   }
 
   .background-container {
-    height: 40rem;
+    padding: 6rem 0;
     background-image: url("../img/history-section.jpg");
     background-repeat: no-repeat;
     background-position: center;

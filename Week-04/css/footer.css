@@ -20,11 +20,18 @@
   height: 1.75rem;
 }
 
+@media only screen and (min-width: 480px){
+  .footer p{
+    font-size:10px;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .footer {
     justify-content: space-between;
     padding: 0 20px;
   }
+
   .footer p {
     font-size: 13px;
   }
@@ -33,6 +40,7 @@
     display: flex;
     gap: 10px;
   }
+  
   .social-container img {
     width: 2.75rem;
     height: 2.75rem;

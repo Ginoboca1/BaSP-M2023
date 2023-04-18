@@ -4,6 +4,7 @@
   --Grey: #ebecf0;
   --LightGrey: #f8f6f7;
   --DarkBlue: #171642;
+  --DarkGreen:#34646F;
   --RadioColor: #34636e;
 }
 
@@ -56,6 +57,7 @@ body {
   h1 {
     font-size: 2rem;
   }
+  
   h2 {
     font-size: 1.7rem;
   }

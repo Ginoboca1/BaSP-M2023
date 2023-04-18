@@ -8,8 +8,8 @@ console.log("-------EXERCISE 4 : IF ELSE-------");
 console.log("Exercise 4.a");
 
 var random = Math.random();
-if (random > 0.5) {
-  alert("Greather than 0,5");
+if (random >= 0.5) {
+  alert("Greater than or equal to 0,5");
 } else {
   alert("Lower than 0,5");
 }
