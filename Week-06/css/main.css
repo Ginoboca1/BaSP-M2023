@@ -1,0 +1,471 @@
+.main-content {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.section-health {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 3.1rem;
+  text-align: center;
+}
+
+.health-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+.section-health h2 {
+  margin-bottom: 1.25rem;
+}
+
+.section-health p {
+  font-size: 0.75rem;
+  text-shadow: #000000 1px 0 10px;
+  font-weight: 300;
+}
+
+.section-health img {
+  width: 100%;
+}
+
+.section-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 6rem 0;
+  background-image: url("../img/section-02.jpg");
+  background-size: fit;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.how-can-we-help-you-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.8rem;
+  text-align: center;
+  width: 90%;
+  height: 100%;
+}
+
+.section-help h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.help-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.1rem;
+  min-height:69px;
+  margin-bottom: 1.25rem;
+  background-color: var(--Grey);
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.section-form h2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.div-test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-mail {
+  width: 30px;
+}
+
+.form-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.form label{
+  display:flex;
+  align-items:center;
+}
+
+.form-field-text {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.2rem;
+}
+
+.form-field-text input[type="text"] {
+  width: 175px;
+  padding:10px;
+  border-radius: 20px;
+  border: solid 1px var(--Blue);
+}
+
+.reason-for-contact h3 {
+  margin: 0 0 1.2rem 1.2rem;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.form-field {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  margin-left: 1rem;
+  margin-bottom: 20px;
+  margin: 0 0 1.2rem 1rem;
+}
+
+.message {
+  width: 90%;
+  margin-left: 20px;
+}
+
+form textarea {
+  width: 90%;
+  height: 6.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--Blue);
+  background-color: white;
+  font-weight: 500;
+  font-size: 0.6rem;
+  outline: none;
+}
+
+.buttons-container {
+  display: flex;
+  width: 90%;
+  gap: 20px;
+}
+
+.form button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.form button[type="submit"] {
+  display: inline;
+  width: 10.1rem;
+  background-color: var(--Green);
+  margin-bottom: 10px;
+}
+
+.form button[type="reset"] {
+  display: inline-block;
+  background-color: white;
+  border: solid 1px var(--Blue);
+}
+
+.section-history h2 {
+  text-align: center;
+}
+
+.background-container {
+  display: flex;
+  align-items: center;
+  height: 26.9rem;
+  margin-top: 1.25rem;
+  background-image: url("../img/history-blur.png");
+  background-position: center;
+}
+
+.background-container p {
+  width: 80%;
+  margin: 0 auto;
+  color: var(--Grey);
+}
+
+.section-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3.1rem;
+}
+
+.activities-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.activities-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 12.5rem;
+}
+
+.activities-list li p {
+  width: 80px;
+}
+
+.activities-list img {
+  width: 4rem;
+}
+
+.membership-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.membership-area h3 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.black-title {
+  color: black;
+}
+
+.membership-test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .main-content {
+    width: 100%;
+  }
+
+  .section-health {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .activities-list {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .section-health p {
+    font-weight: 700;
+    text-shadow: none;
+    line-height:23px;
+  }
+
+  .reason-for-contact {
+    width: 90%;
+  }
+
+  .form {
+    gap: 50px;
+  }
+
+  .form-field-text {
+    gap: 60px;
+  }
+
+  .form-area {
+    align-items: flex-start;
+    width: 80%;
+  }
+
+  .background-container {
+    background-image: url("../img/history-blur.png");
+    background-repeat: none;
+    background-position: center;
+  }
+
+  .functional {
+    display: inline-block;
+  }
+
+  .activities-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:100%;
+    height: 200px;
+  }
+
+  .activities-list li{
+    min-width:0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-health h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .section-health img {
+    width: 28.3rem;
+    height: auto;
+    margin:0 auto;
+  }
+
+  .background-container {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .activities-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width:80%;
+    height: 200px;
+  }
+
+  .list-help-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .form textarea {
+    max-width: 37.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-health {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .health-container {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+  }
+
+  .section-health p {
+    font-size: 0.75rem;
+  }
+
+  .section-health h2 {
+    text-align: start;
+  }
+
+  .section-health img {
+    height: 400px;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+  .list-help-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 745px;
+  }
+
+  .section-form h2 {
+    text-align: left;
+    margin-left: 2%;
+  }
+
+  .line {
+    margin: 2rem auto;
+    width: 92%;
+    height: 5px;
+    background-color: var(--Blue);
+  }
+
+  .div-test {
+    justify-content: start;
+  }
+
+  .form-area {
+    width: 100%;
+    margin-left: 5%;
+  }
+
+  .reason-for-contact {
+    width: 100%;
+  }
+
+  .message {
+    width: 100%;
+    margin-left: 6%;
+    font-size: 19px;
+  }
+
+  form textarea {
+    width: 70%;
+    margin-right: 25%;
+  }
+
+  .background-container {
+    padding: 6rem 0;
+    background-image: url("../img/history-section.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .section-activities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .activities-list {
+    display: block;
+    height: 100%;
+  }
+
+  .activities-list li {
+    gap: 30px;
+  }
+
+  .activities-area {
+    width: 50%;
+  }
+
+  .membership-area {
+    width: 50%;
+  }
+
+  .membership-test {
+    gap: 30px;
+  }
+}
