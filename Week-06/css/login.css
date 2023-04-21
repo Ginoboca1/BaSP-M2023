@@ -28,6 +28,9 @@ body {
   margin: 10px 0px 0px 10px;
 }
 
+.arrow-desktop {
+  display: none;
+}
 
 .logo {
   width: 300px;
@@ -69,12 +72,17 @@ h1 {
   gap: 5px;
 }
 
-.form-field-text input {
+.input {
   height: 30px;
   border-radius: 10px;
   border: none;
   padding: 10px;
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+}
+
+.input-error {
+  border: var(--Red) solid 2px;
+  background-color: var(--Red);
 }
 
 .forgot {
@@ -102,8 +110,6 @@ h1 {
   .image-section {
     height: 100vh;
     background-image: url("../img/login-image.png");
-    flex-direction: column;
-    justify-content: space-between;
   }
 
   .main-section {
@@ -118,12 +124,12 @@ h1 {
     margin: 0 auto;
   }
 
-  .arrow{
-    display:none;
+  .arrow {
+    display: none;
   }
 
-  .arrow-desktop{
-    display:block;
+  .arrow-desktop {
+    display: block;
   }
 
   .button-submit {
@@ -156,6 +162,11 @@ h1 {
   }
 
   .logo {
+    margin-left: 20px;
+  }
+
+  .arrow-desktop {
+    display: flex;
     margin-left: 20px;
   }
 }

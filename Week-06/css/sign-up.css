@@ -33,25 +33,29 @@ body {
   gap: 5px;
 }
 
-.form-field-text input {
+.input {
   border-radius: 10px;
   border: none;
   padding: 18px;
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
 }
 
+.input-error {
+  background-color: var(--Red);
+}
+
 .forgot {
   margin-top: 20px;
   display: flex;
-  justify-content:flex-start;
-  gap:10px;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .button-submit {
   display: block;
   width: 100%;
   margin-top: 20px;
-  padding:20px;
+  padding: 20px;
   border: none;
   border-radius: 10px;
   text-transform: uppercase;
@@ -94,24 +98,24 @@ h1 {
     flex-direction: row-reverse;
   }
 
-  .form{
-    padding:0;
-    width:50%;
-    margin:0 auto;
-    background-color:white;
-  }
-  
-  .form-area{
-    gap:5px;
+  .form {
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
   }
 
-  .logo{
-    margin-right:10px;
+  .form-area {
+    gap: 5px;
   }
 
-  .logo-01{
-    display:block;
-    width:70px;
+  .logo {
+    margin-right: 10px;
+  }
+
+  .logo-01 {
+    display: block;
+    width: 70px;
     margin: 0 auto;
   }
 
@@ -119,7 +123,7 @@ h1 {
     background-image: url("../img/register-img.png");
     width: 50%;
     margin: 0;
-    align-items:end;
+    align-items: end;
   }
 
   .main-section {
@@ -133,19 +137,19 @@ h1 {
   }
 
   .arrow-desktop {
-    display:flex;
+    display: flex;
     width: 25px;
-    margin-left:20px;
+    margin-left: 20px;
   }
 
-  .button-submit{
-    margin-top:20px;
-    padding:15px;
-    width:150px;
+  .button-submit {
+    margin-top: 20px;
+    padding: 15px;
+    width: 150px;
     margin: 30px auto 0 auto;
-    background-color:var(--Green);
+    background-color: var(--Green);
     transition: 0.2s;
-    cursor:pointer;
+    cursor: pointer;
   }
 
   .button-submit:hover {
@@ -153,16 +157,16 @@ h1 {
     color: white;
   }
 
-  h1{
-    display:none;
+  h1 {
+    display: none;
   }
 
-  .form-field-text input{
-    border:var(--Gren) solid 1px;
-    padding:10px;
+  .input {
+    border: var(--Green) solid 1px;
+    padding: 10px;
   }
 
-  .forgot{
-    justify-content:center;
+  .forgot {
+    justify-content: center;
   }
 }
