@@ -1,0 +1,168 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  background-image: url("../img/shadow-register-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1.9;
+  width: 100%;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.form-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field-text input {
+  border-radius: 10px;
+  border: none;
+  padding: 18px;
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+}
+
+.forgot {
+  margin-top: 20px;
+  display: flex;
+  justify-content:flex-start;
+  gap:10px;
+}
+
+.button-submit {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding:20px;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  width: 50px;
+  margin: 10px 0px 0px 10px;
+}
+
+.arrow-desktop {
+  display: none;
+}
+
+.logo {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.logo-01 {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form {
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--Green);
+}
+
+@media only screen and (min-width: 780px) {
+  .main-container {
+    flex-direction: row-reverse;
+  }
+
+  .form{
+    padding:0;
+    width:50%;
+    margin:0 auto;
+    background-color:white;
+  }
+  
+  .form-area{
+    gap:5px;
+  }
+
+  .logo{
+    margin-right:10px;
+  }
+
+  .logo-01{
+    display:block;
+    width:70px;
+    margin: 0 auto;
+  }
+
+  .image-section {
+    background-image: url("../img/register-img.png");
+    width: 50%;
+    margin: 0;
+    align-items:end;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .arrow-desktop {
+    display:flex;
+    width: 25px;
+    margin-left:20px;
+  }
+
+  .button-submit{
+    margin-top:20px;
+    padding:15px;
+    width:150px;
+    margin: 30px auto 0 auto;
+    background-color:var(--Green);
+    transition: 0.2s;
+    cursor:pointer;
+  }
+
+  .button-submit:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  h1{
+    display:none;
+  }
+
+  .form-field-text input{
+    border:var(--Gren) solid 1px;
+    padding:10px;
+  }
+
+  .forgot{
+    justify-content:center;
+  }
+}

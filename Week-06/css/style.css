@@ -30,7 +30,8 @@ a {
 }
 
 a {
-  text-decoration: none;
+    color:blue;
+    font-size:0.7rem;
 }
 
 li {
