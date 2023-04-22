@@ -13,15 +13,15 @@
     <title>BaSP-M2023</title>
   </head>
   <body>
-    <aside class="sidebar">
-      <img class="burguer-menu-nav" src="./img/icon.png" />
+    <aside id="sidebar" class="sidebar">
+      <img id="burguer-menu" class="burguer-menu-nav" src="../img/icon.png" />
       <div class="flex-aside">
         <img src="../img/logo-rr-1.png" class="logo-rr1" />
         <p class="aside-text">Radium Rocket S.A</p>
         <nav class="navbar">
           <ul>
             <li>
-              <a class="nav-item nav-item-blue" href="#">home</a>
+              <a class="nav-item nav-item-blue" href="../views/index.html">home</a>
             </li>
             <li>
               <a class="nav-item" href="../views/sign-up.html">sign up</a>
@@ -95,7 +95,7 @@
           alt="Radium Rocket Logo 02"
           class="logo-rr2"
         />
-        <img class="burguer-menu" src="../img/icon.png" />
+        <img onclick="openNav()" class="burguer-menu" src="../img/icon.png" />
         <h1>mega rocket s.a</h1>
       </header>
       <main class="main-content">
@@ -321,5 +321,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="../js/index.js"></script>
   </body>
 </html>

@@ -25,21 +25,21 @@
         <form class="form">
           <div class="form-area">
             <div class="form-field-text">
-              <label for="name"> User </label>
+              <label for="user"> User </label>
               <input
-                id="name"
+                id="user"
                 class="input"
                 type="text"
                 placeholder="Insert your user"
               />
             </div>
             <div class="form-field-text">
-              <label for="surname"> Password </label>
+              <label for="password"> Password </label>
               <input
-                id="surname"
-                type="text"
+                id="password"
+                type="password"
                 placeholder="Insert your password"
-                class="input input-error"
+                class="input"
               />
             </div>
           </div>
@@ -52,9 +52,11 @@
             <a href="">Forgot password?</a>
           </div>
 
-          <button class="button-submit" type="submit">login</button>
+          <button id="submitButton" class="button-submit" type="submit">login</button>
         </form>
       </main>
     </div>
+
+    <script src="../js/login.js"></script>
   </body>
 </html>

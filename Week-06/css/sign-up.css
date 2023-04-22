@@ -2,23 +2,28 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .main-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  width: 100%;
+  margin: 0 0 20px 0;
   background-image: url("../img/shadow-register-img.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 1.9;
-  width: 100%;
-  margin: 0 0 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 33px;
 }
 
 .form-area {
@@ -34,21 +39,26 @@ body {
 }
 
 .input {
-  border-radius: 10px;
-  border: none;
   padding: 18px;
+  border-radius: 10px;
+  border: transparent solid 2px;
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
 }
 
 .input-error {
-  background-color: var(--Red);
+  border: solid 2px var(--Red);
+  color: red;
+}
+
+.input-correct {
+  border: solid 2px var(--Green);
 }
 
 .forgot {
-  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .button-submit {
@@ -57,9 +67,9 @@ body {
   margin-top: 20px;
   padding: 20px;
   border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   text-transform: uppercase;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .arrow {
@@ -71,7 +81,7 @@ body {
   display: none;
 }
 
-.logo {
+.logo-02 {
   width: 300px;
   margin: 0 auto;
 }
@@ -80,37 +90,32 @@ body {
   display: none;
 }
 
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .form {
   width: 80%;
   margin: 20px auto;
-  border-radius: 10px;
   padding: 20px;
+  border-radius: 10px;
   background-color: var(--Green);
 }
 
 @media only screen and (min-width: 780px) {
+  h1 {
+    display: none;
+  }
+
   .main-container {
     flex-direction: row-reverse;
   }
 
   .form {
     padding: 0;
-    width: 50%;
-    margin: 0 auto;
     background-color: white;
   }
 
   .form-area {
-    gap: 5px;
-  }
-
-  .logo {
-    margin-right: 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 530px;
   }
 
   .logo-01 {
@@ -119,10 +124,14 @@ h1 {
     margin: 0 auto;
   }
 
+  .logo-02 {
+    margin-right: 10px;
+  }
+
   .image-section {
-    background-image: url("../img/register-img.png");
     width: 50%;
     margin: 0;
+    background-image: url("../img/register-img.png");
     align-items: end;
   }
 
@@ -130,6 +139,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 50%;
+    gap: 20px;
   }
 
   .arrow {
@@ -143,9 +153,8 @@ h1 {
   }
 
   .button-submit {
-    margin-top: 20px;
-    padding: 15px;
     width: 150px;
+    padding: 15px;
     margin: 30px auto 0 auto;
     background-color: var(--Green);
     transition: 0.2s;
@@ -157,12 +166,7 @@ h1 {
     color: white;
   }
 
-  h1 {
-    display: none;
-  }
-
   .input {
-    border: var(--Green) solid 1px;
     padding: 10px;
   }
 

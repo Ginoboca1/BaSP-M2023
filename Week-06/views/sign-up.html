@@ -14,7 +14,7 @@
         <a href="../views/index.html">
           <img class="arrow" src="../img/arrow.png" />
         </a>
-        <img class="logo" src="../img/logo-rr-2.png" alt="radium rocket02" />
+        <img class="logo-02" src="../img/logo-rr-2.png" alt="radium rocket02" />
       </section>
       <main class="main-section">
         <h1>sign up</h1>
@@ -22,30 +22,101 @@
           <img class="arrow-desktop" src="../img/arrow.png" />
         </a>
         <img class="logo-01" src="../img/logo-rr-1.png" />
-        <form class="form">
+
+        <form id="form" class="form">
           <div class="form-area">
             <div class="form-field-text">
               <label for="name"> Name </label>
               <input
-                class="input input-error"
+                name="name"
+                class="input"
                 id="name"
                 type="text"
                 placeholder="Insert your Name"
               />
             </div>
+
             <div class="form-field-text">
-              <label for="surname"> Lastname </label>
+              <label for="last"> Lastname </label>
               <input
+                name="lastname"
                 class="input"
-                id="surname"
+                id="lastname"
                 type="text"
                 placeholder="Insert your Lastname"
               />
             </div>
 
             <div class="form-field-text">
+              <label for="dni"> DNI </label>
+              <input
+                name="dni"
+                class="input"
+                id="dni"
+                type="text"
+                placeholder="Insert your DNI"
+              />
+            </div>
+
+            <div class="form-field-text">
+              <label for="date"> Date </label>
+              <input
+                name="date"
+                class="input"
+                id="date"
+                type="text"
+                placeholder="dd/mm/aaaa"
+              />
+            </div>
+
+            <div class="form-field-text">
+              <label for="phone"> Phone </label>
+              <input
+                name="phone"
+                class="input"
+                id="phone"
+                type="text"
+                placeholder="Insert your phone"
+              />
+            </div>
+
+            <div class="form-field-text">
+              <label for="adress"> Adress </label>
+              <input
+                name="adress"
+                class="input"
+                id="adress"
+                type="text"
+                placeholder="Insert your adress"
+              />
+            </div>
+
+            <div class="form-field-text">
+              <label for="locality"> Location </label>
+              <input
+                name="location"
+                class="input"
+                id="location"
+                type="text"
+                placeholder="Insert your location"
+              />
+            </div>
+
+            <div class="form-field-text">
+              <label for="postal"> Postal Code </label>
+              <input
+                name="postal"
+                class="input"
+                id="postal"
+                type="text"
+                placeholder="Insert your postal code"
+              />
+            </div>
+
+            <div class="form-field-text">
               <label for="email"> E-mail </label>
               <input
+                name="email"
                 class="input"
                 id="email"
                 type="text"
@@ -54,18 +125,9 @@
             </div>
 
             <div class="form-field-text">
-              <label for="user"> User </label>
-              <input
-                class="input"
-                id="user"
-                type="text"
-                placeholder="Insert your User"
-              />
-            </div>
-
-            <div class="form-field-text">
               <label for="password"> Password </label>
               <input
+                name="password"
                 class="input"
                 id="password"
                 type="text"
@@ -74,12 +136,13 @@
             </div>
 
             <div class="form-field-text">
-              <label for="reset"> Reset Password </label>
+              <label for="repeat"> Repeat Password </label>
               <input
+                name="repeat"
                 class="input"
-                id="reset"
-                type="text"
-                placeholder="Insert your new password"
+                id="repeat"
+                type="password"
+                placeholder="Repeat password"
               />
             </div>
           </div>
@@ -92,5 +155,7 @@
         </form>
       </main>
     </div>
+
+    <script src="../js/sign-up.js"></script>
   </body>
 </html>
