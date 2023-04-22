@@ -47,11 +47,12 @@ h1 {
 
 .input-error {
   border: solid 2px var(--Red);
-  color: red;
+  color: var(--Red);
 }
 
 .input-correct {
   border: solid 2px var(--Green);
+  color: var(--Green);
 }
 
 .forgot {
