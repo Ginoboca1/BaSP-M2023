@@ -81,8 +81,13 @@ h1 {
 }
 
 .input-error {
-  border: var(--Red) solid 2px;
-  background-color: var(--Red);
+  border: solid 2px var(--Red);
+  color: var(--Red);
+}
+
+.input-correct {
+  border: solid 2px var(--Green);
+  color: var(--Green);
 }
 
 .forgot {

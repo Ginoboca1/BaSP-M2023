@@ -3,15 +3,15 @@ const inputs = document.querySelectorAll("input");
 
 const inputName = document.getElementById("name");
 const inputLastName = document.getElementById("lastname");
-const inputEmail = document.getElementById("email");
-const inputUser = document.getElementById("user");
-const inputPassword = document.getElementById("password");
-const inputReset = document.getElementById("reset");
 const inputId = document.getElementById("dni");
+const inputDate = document.getElementById("date");
 const inputAdress = document.getElementById("adress");
 const inputLocation = document.getElementById("location");
 const inputPostal = document.getElementById("postal");
 const inputPhone = document.getElementById("phone");
+const inputEmail = document.getElementById("email");
+const inputPassword = document.getElementById("password");
+const inputReset = document.getElementById("reset");
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -33,6 +33,7 @@ const validation = (e) => {
           }
         }
       }
+      break;
 
     case "lastname":
       if (e.target.value.length < 3) {
@@ -52,6 +53,8 @@ const validation = (e) => {
           }
         }
       }
+      break;
+
     case "dni":
       if (e.target.value.length < 7) {
         inputId.classList.add("input-error");
@@ -62,8 +65,16 @@ const validation = (e) => {
           inputId.classList.add("input-error");
         }
       }
+      break;
 
     case "date":
+      if (e.target.value.length <= 0) {
+        inputDate.classList.add("input-error");
+      } else {
+        inputDate.classList.remove("input-error");
+        inputDate.classList.add("input-correct");
+      }
+      break;
 
     case "phone":
       if (e.target.value.length < 10) {
@@ -75,33 +86,49 @@ const validation = (e) => {
           inputPhone.classList.add("input-error");
         }
       }
+      break;
 
     case "adress":
-    /* 
-      let hasLetters = false;
-      let hasNumbers = false;
-      let hasSpaces = false;
 
-      if(e.target.value.length < 5){
-        inputAdress.classList.add('input-error');
-      } else{
-        if(!Number(e.target.value)){
-          inputAdress.classList.add('input-error');
-        } else {
-          hasNumbers = true;
+        if (e.target.value.length < 5) {
+          inputAdress.classList.remove('input-correct')
+          inputAdress.classList.add('input-error')
+        } else{
+          let hasLetter = false;
+          let hasNumber = false;
+          let hasSpace = false;
+
           for (let i = 0; i < e.target.value.length; i++) {
-            let char = e.target.value[i];
-            if((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')){
-              console.log('Tiene letras!');
+            let charCode = e.target.value.charCodeAt(i);
+            let value = e.target.value.trim();
+
+            if (!hasLetter && ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122))) {
+              hasLetter = true;
+            }
+
+            if (!hasNumber && !isNaN(e.target.value[i])) {
+              hasNumber = true;
+            }
+
+            if (value.indexOf(' ') == -1 || value.indexOf(' ') === 0 || value.indexOf(' ') === value.length - 1) {
+              hasSpace = false;
             } else{
-              console.log('No tiene letras');
+              hasSpace = true;
             }
           }
-        }
+
+          if (hasLetter && hasNumber && hasSpace) {
+            inputAdress.classList.remove("input-error");
+            inputAdress.classList.add("input-correct");
+          } else{
+            inputAdress.classList.remove('input-correct')
+            inputAdress.classList.add('input-error')
+          }
       }
-      */
+      break;
 
     case "location":
+      break;
 
     case "postal":
       if (e.target.value.length >= 4 && e.target.value.length <= 5) {
@@ -113,6 +140,7 @@ const validation = (e) => {
       } else {
         inputPostal.classList.add("input-error");
       }
+      break;
 
     case "email":
       if (emailRegex.test(e.target.value)) {
@@ -122,10 +150,13 @@ const validation = (e) => {
         inputEmail.classList.remove("input-correct");
         inputEmail.classList.add("input-error");
       }
+      break;
 
     case "user":
+      break;
 
     case "password":
+      break;
 
     case "reset":
       break;

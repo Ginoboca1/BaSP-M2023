@@ -1,18 +1,37 @@
-var inputUser = document.getElementById("user");
-var inputPassword = document.getElementById("password");
-var submitButton = document.getElementById("submitButton");
+let inputs = document.querySelectorAll("input");
+const inputEmail = document.getElementById("email");
+const inputPassword = document.getElementById("password");
+const submitButton = document.getElementById("submitButton");
 
-inputUser.onblur = () => {
-  if (inputUser.value !== 'kaka') {
-    inputUser.classList.add('input-error')
-  } else {
-    inputUser.classList.remove('input-error');
+const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+const validation = (e) => {
+  switch (e.target.name) {
+    case "email":
+      if (!emailRegex.test(e.target.value)) {
+        inputEmail.classList.remove("input-correct");
+        inputEmail.classList.add("input-error");
+      } else {
+        inputEmail.classList.remove("input-error");
+        inputEmail.classList.add("input-correct");
+      }
+      break;
+
+    case "password":
+      console.log("password");
+      break;
   }
 };
 
-inputUser.onfocus = () => {
-  
-};
+inputs.forEach((input) => {
+  input.addEventListener("blur", validation);
+});
+
+inputs.forEach((input) => {
+  input.onfocus = () => {
+    input.classList.remove("input-error", "input-correct");
+  };
+});
 
 submitButton.addEventListener("click", function (e) {
   e.preventDefault();

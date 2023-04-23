@@ -150,7 +150,7 @@ h1 {
   .arrow-desktop {
     display: flex;
     width: 25px;
-    margin-left: 20px;
+    margin: 20px 0 0 20px;
   }
 
   .button-submit {
