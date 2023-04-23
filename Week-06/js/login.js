@@ -18,7 +18,24 @@ const validation = (e) => {
       break;
 
     case "password":
-      console.log("password");
+      let hasLetter = false;
+      let hasNumber = false;
+
+      for (let i = 0; i < e.target.value.length; i++) {
+        let charCode = e.target.value.charCodeAt(i)
+        if(charCode >= 48 && charCode <= 57){
+          hasNumber = true;
+        } else if((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)){
+          hasLetter = true;
+        }
+      }
+      if(e.target.value.length >= 8 && hasLetter && hasNumber){
+        inputPassword.classList.remove("input-error");
+        inputPassword.classList.add("input-correct");
+      } else{
+        inputPassword.classList.remove("input-correct");
+        inputPassword.classList.add("input-error");
+      }
       break;
   }
 };

@@ -11,7 +11,7 @@ const inputPostal = document.getElementById("postal");
 const inputPhone = document.getElementById("phone");
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
-const inputReset = document.getElementById("reset");
+const inputRepeat = document.getElementById("repeat");
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -89,41 +89,48 @@ const validation = (e) => {
       break;
 
     case "adress":
+      if (e.target.value.length < 5) {
+        inputAdress.classList.remove("input-correct");
+        inputAdress.classList.add("input-error");
+      } else {
+        let hasLetter = false;
+        let hasNumber = false;
+        let hasSpace = false;
 
-        if (e.target.value.length < 5) {
-          inputAdress.classList.remove('input-correct')
-          inputAdress.classList.add('input-error')
-        } else{
-          let hasLetter = false;
-          let hasNumber = false;
-          let hasSpace = false;
+        for (let i = 0; i < e.target.value.length; i++) {
+          let charCode = e.target.value.charCodeAt(i);
+          let value = e.target.value.trim();
 
-          for (let i = 0; i < e.target.value.length; i++) {
-            let charCode = e.target.value.charCodeAt(i);
-            let value = e.target.value.trim();
-
-            if (!hasLetter && ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122))) {
-              hasLetter = true;
-            }
-
-            if (!hasNumber && !isNaN(e.target.value[i])) {
-              hasNumber = true;
-            }
-
-            if (value.indexOf(' ') == -1 || value.indexOf(' ') === 0 || value.indexOf(' ') === value.length - 1) {
-              hasSpace = false;
-            } else{
-              hasSpace = true;
-            }
+          if (
+            !hasLetter &&
+            ((charCode >= 65 && charCode <= 90) ||
+              (charCode >= 97 && charCode <= 122))
+          ) {
+            hasLetter = true;
           }
 
-          if (hasLetter && hasNumber && hasSpace) {
-            inputAdress.classList.remove("input-error");
-            inputAdress.classList.add("input-correct");
-          } else{
-            inputAdress.classList.remove('input-correct')
-            inputAdress.classList.add('input-error')
+          if (!hasNumber && !isNaN(e.target.value[i])) {
+            hasNumber = true;
           }
+
+          if (
+            value.indexOf(" ") == -1 ||
+            value.indexOf(" ") === 0 ||
+            value.indexOf(" ") === value.length - 1
+          ) {
+            hasSpace = false;
+          } else {
+            hasSpace = true;
+          }
+        }
+
+        if (hasLetter && hasNumber && hasSpace) {
+          inputAdress.classList.remove("input-error");
+          inputAdress.classList.add("input-correct");
+        } else {
+          inputAdress.classList.remove("input-correct");
+          inputAdress.classList.add("input-error");
+        }
       }
       break;
 
@@ -156,9 +163,51 @@ const validation = (e) => {
       break;
 
     case "password":
+      let hasLetter = false;
+      let hasNumber = false;
+
+      for (let i = 0; i < e.target.value.length; i++) {
+        let charCode = e.target.value.charCodeAt(i);
+        if (charCode >= 48 && charCode <= 57) {
+          hasNumber = true;
+        } else if (
+          (charCode >= 65 && charCode <= 90) ||
+          (charCode >= 97 && charCode <= 122)
+        ) {
+          hasLetter = true;
+        }
+      }
+      if (e.target.value.length >= 8 && hasLetter && hasNumber) {
+        inputPassword.classList.remove("input-error");
+        inputPassword.classList.add("input-correct");
+      } else {
+        inputPassword.classList.remove("input-correct");
+        inputPassword.classList.add("input-error");
+      }
       break;
 
-    case "reset":
+    case "repeat":
+      let hasLetterOne = false;
+      let hasNumberOne = false;
+
+      for (let i = 0; i < e.target.value.length; i++) {
+        let charCode = e.target.value.charCodeAt(i);
+        if (charCode >= 48 && charCode <= 57) {
+          hasNumberOne = true;
+        } else if (
+          (charCode >= 65 && charCode <= 90) ||
+          (charCode >= 97 && charCode <= 122)
+        ) {
+          hasLetterOne = true;
+        }
+      }
+      if (e.target.value.length >= 8 && hasLetterOne && hasNumberOne) {
+        inputRepeat.classList.remove("input-error");
+        inputRepeat.classList.add("input-correct");
+      } else {
+        inputRepeat.classList.remove("input-correct");
+        inputRepeat.classList.add("input-error");
+      }
       break;
   }
 };
