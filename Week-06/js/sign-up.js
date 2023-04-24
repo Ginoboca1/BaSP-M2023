@@ -135,6 +135,26 @@ const validation = (e) => {
       break;
 
     case "location":
+      if (e.target.value.length < 3) {
+        inputLocation.classList.remove("input-correct");
+        inputLocation.classList.add("input-error");
+      } else {
+        for (let i = 0; i < e.target.value.length; i++) {
+          let codigo = e.target.value.charCodeAt(i);
+          if (
+            !(codigo > 47 && codigo < 58) &&
+            !(codigo > 64 && codigo < 91) &&
+            !(codigo > 96 && codigo < 123)
+          ) {
+            inputLocation.classList.remove("input-correct");
+            inputLocation.classList.add("input-error");
+          } else {
+            inputLocation.classList.remove("input-error");
+            inputLocation.classList.add("input-correct");
+          }
+        }
+      }
+
       break;
 
     case "postal":
@@ -157,9 +177,6 @@ const validation = (e) => {
         inputEmail.classList.remove("input-correct");
         inputEmail.classList.add("input-error");
       }
-      break;
-
-    case "user":
       break;
 
     case "password":
