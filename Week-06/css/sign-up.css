@@ -26,6 +26,14 @@ h1 {
   opacity: 1.9;
 }
 
+.form {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Green);
+}
+
 .form-area {
   display: flex;
   flex-direction: column;
@@ -66,6 +74,7 @@ h1 {
   display: block;
   width: 100%;
   margin-top: 20px;
+  margin-bottom:20px;
   padding: 20px;
   border: none;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
@@ -91,12 +100,21 @@ h1 {
   display: none;
 }
 
-.form {
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: var(--Green);
+
+.login-section{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+
+.login-section p,
+.login-section a{
+  font-size:12px;
+}
+
+.login-section a{
+  text-decoration:underline;
+  font-weight:bolder;
 }
 
 @media only screen and (min-width: 780px) {
@@ -156,7 +174,7 @@ h1 {
   .button-submit {
     width: 150px;
     padding: 15px;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 20px auto;
     background-color: var(--Green);
     transition: 0.2s;
     cursor: pointer;

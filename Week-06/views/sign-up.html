@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/sign-up.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Sign Up</title>
@@ -22,7 +22,9 @@
         <a href="../views/index.html">
           <img class="arrow-desktop" src="../img/arrow.png" />
         </a>
-        <img class="logo-01" src="../img/logo-rr-1.png" />
+        <a href="./index.html">
+          <img class="logo-01" src="../img/logo-rr-1.png" />
+        </a>
 
         <form id="form" class="form">
           <div class="form-area">
@@ -152,7 +154,15 @@
             <a href="">Acepts terms and conditions?</a>
             <input type="checkbox" />
           </div>
-          <button class="button-submit" type="submit">Sign In</button>
+
+          <button id="submitButton" class="button-submit" type="submit">
+            Sign In
+          </button>
+
+          <div class="login-section">
+            <p>You already have an account?</p>
+            <a href="../views/login.html">login</a>
+          </div>
         </form>
       </main>
     </div>

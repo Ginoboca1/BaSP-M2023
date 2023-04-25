@@ -15,7 +15,7 @@ body {
   gap: 33px;
   width: 100%;
   height: 20%;
-  margin: 0;
+  margin: 0 0 20px 0;
   background-image: url("../img/login-shadow-image.png");
   background-size: cover;
   background-position: center;
@@ -75,7 +75,7 @@ h1 {
 .input {
   height: 30px;
   padding: 10px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 10px;
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
 }
@@ -100,11 +100,28 @@ h1 {
   display: block;
   width: 100%;
   margin-top: 100px;
+  margin-bottom:20px;
   height: 50px;
   border: none;
   border-radius: 10px;
   text-transform: uppercase;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup-section{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+
+.signup-section p,
+.signup-section a{
+  font-size:12px;
+}
+
+.signup-section a{
+  text-decoration:underline;
+  font-weight:bolder;
 }
 
 @media only screen and (min-width: 780px) {
