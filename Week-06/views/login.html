@@ -27,26 +27,30 @@
         <h1>login</h1>
         <form class="form">
           <div class="form-area">
-            <div class="form-field-text">
+            <div class="form-field-text" id="email-group">
               <label for="email"> Email </label>
               <input
                 id="email"
                 name="email"
                 class="input"
                 type="text"
-                placeholder="Insert your email"
+                placeholder="mail@mail.com"
               />
+              <p class="form-input-error">It must have a valid email format.</p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="password-group">
               <label for="password"> Password </label>
               <input
                 id="password"
                 name="password"
                 type="password"
-                placeholder="Insert your password"
+                placeholder="**********"
                 class="input"
               />
+              <p class="form-input-error">
+                At least 8 characters, made up of letters and numbers.
+              </p>
             </div>
           </div>
 
@@ -64,10 +68,13 @@
 
           <div class="signup-section">
             <p>You do not have an account?</p>
-            <a href="../views/sign-up.html">login</a>
+            <a href="../views/sign-up.html">sign up</a>
           </div>
-
         </form>
+
+        <div id="message-form" class="message-form">
+          <p>Error: rellena el formulario correctamente</p>
+        </div>
       </main>
     </div>
 

@@ -80,6 +80,22 @@ h1 {
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
 }
 
+.input-contain{
+  width:100%;
+}
+
+.form-input-error{
+  font-size:10px;
+  color: var(--Red);
+  display:none;
+}
+
+.form-input-error-show{
+  font-size:10px;
+  color: var(--Red);
+  display:block;
+}
+
 .input-error {
   border: solid 2px var(--Red);
   color: var(--Red);
@@ -122,6 +138,24 @@ h1 {
 .signup-section a{
   text-decoration:underline;
   font-weight:bolder;
+}
+
+.message-form{
+  background-color:var(--Red);
+  width:80%;
+  padding:20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: none;
+}
+
+.message-form-show{
+  background-color:var(--Red);
+  width:80%;
+  padding:20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
 }
 
 @media only screen and (min-width: 780px) {
@@ -190,5 +224,10 @@ h1 {
   .arrow-desktop {
     display: flex;
     margin-left: 20px;
+  }
+
+  .message-form{
+    padding:10px;
+    margin-bottom:20px;
   }
 }

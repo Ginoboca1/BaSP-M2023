@@ -7,19 +7,35 @@ var arrayError = [];
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
+const fields = {
+  email: false,
+  password: false,
+};
+
 const validation = (e) => {
   switch (e.target.name) {
     case "email":
-      if (e.target.value.length === 0) {
+      if (e.target.value == null || e.target.value == '') {
         inputEmail.classList.add("input-error");
+        document
+          .querySelector("#email-group .form-input-error")
+          .classList.add("form-input-error-show");
         arrayError[0] = "Email required";
       } else if (!emailRegex.test(e.target.value)) {
         inputEmail.classList.remove("input-correct");
         inputEmail.classList.add("input-error");
+        fields["email"] = false;
         arrayError[1] = "Please insert a email correct format";
+        document
+          .querySelector("#email-group .form-input-error")
+          .classList.add("form-input-error-show");
       } else {
         inputEmail.classList.remove("input-error");
         inputEmail.classList.add("input-correct");
+        fields["email"] = true;
+        document
+          .querySelector("#email-group .form-input-error")
+          .classList.remove("form-input-error-show");
       }
       break;
 
@@ -30,7 +46,10 @@ const validation = (e) => {
       if (e.target.value.length === 0) {
         inputPassword.classList.remove("input-correct");
         inputPassword.classList.add("input-error");
-        arrayError[2] = 'Password requerid';
+        document
+          .querySelector("#password-group .form-input-error")
+          .classList.add("form-input-error-show");
+        arrayError[2] = "Password requerid";
       } else {
         for (let i = 0; i < e.target.value.length; i++) {
           let charCode = e.target.value.charCodeAt(i);
@@ -47,10 +66,16 @@ const validation = (e) => {
         if (e.target.value.length >= 8 && hasLetter && hasNumber) {
           inputPassword.classList.remove("input-error");
           inputPassword.classList.add("input-correct");
+          fields["password"] = true;
         } else {
           inputPassword.classList.remove("input-correct");
           inputPassword.classList.add("input-error");
-          arrayError[3] = "password may have contain 8 characters (letters, numbers)";
+          fields["password"] = false;
+          document
+            .querySelector("#password-group .form-input-error")
+            .classList.add("form-input-error-show");
+          arrayError[3] =
+            "password may have contain 8 characters (letters, numbers)";
         }
       }
       break;
@@ -71,17 +96,26 @@ inputs.forEach((input) => {
 submitButton.addEventListener("click", submitEvent);
 
 function submitEvent(e) {
+  var messageError = '';
   e.preventDefault();
-  var messageError = "";
-  if (arrayError.length === 0) {
-    if((!inputEmail.value) || (!inputPassword)){
-      alert('All fields are required')
-    } else{
-      alert(
-        "Email: " + inputEmail.value + "\n" + "Password: " + inputPassword.value
-      );
-    }
+  if (fields.email && fields.password) {
+    alert(
+      "Email: " + inputEmail.value + "\n" + "Password: " + inputPassword.value
+    );
   } else {
+    inputs.forEach((input) => {
+      input.classList.add("input-error");
+    });
+    document.getElementById("message-form").classList.add("message-form-show");
+    setTimeout(() => {
+      inputs.forEach((input) => {
+        input.classList.remove("input-error");
+      });
+      document
+        .getElementById("message-form")
+        .classList.remove("message-form-show");
+    }, 2000);
+
     arrayError.forEach((error) => {
       if (error.length !== 0) {
         messageError += error + "\n";

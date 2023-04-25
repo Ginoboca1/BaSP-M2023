@@ -28,7 +28,7 @@
 
         <form id="form" class="form">
           <div class="form-area">
-            <div class="form-field-text">
+            <div class="form-field-text" id="name-group">
               <label for="name"> Name </label>
               <input
                 name="name"
@@ -37,9 +37,12 @@
                 type="text"
                 placeholder="Insert your Name"
               />
+              <p class="form-input-error">
+                Letters only and must be more than 3 letters.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="lastname-group">
               <label for="last"> Lastname </label>
               <input
                 name="lastname"
@@ -48,9 +51,12 @@
                 type="text"
                 placeholder="Insert your Lastname"
               />
+              <p class="form-input-error">
+                Letters only and must be more than 3 letters.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="dni-group">
               <label for="dni"> DNI </label>
               <input
                 name="dni"
@@ -59,9 +65,12 @@
                 type="text"
                 placeholder="Insert your DNI"
               />
+              <p class="form-input-error">
+                Numbers only and must have more than 7 numbers.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="date-group">
               <label for="date"> Date </label>
               <input
                 name="date"
@@ -72,7 +81,7 @@
               />
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="phone-group">
               <label for="phone"> Phone </label>
               <input
                 name="phone"
@@ -81,9 +90,12 @@
                 type="text"
                 placeholder="Insert your phone"
               />
+              <p class="form-input-error">
+                Numbers only and must have more than 10 numbers.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="address-group">
               <label for="adress"> Adress </label>
               <input
                 name="adress"
@@ -92,9 +104,13 @@
                 type="text"
                 placeholder="Insert your adress"
               />
+              <p class="form-input-error">
+                At least 5 characters with letters, numbers and a space in the
+                half.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="location-group">
               <label for="location"> Location </label>
               <input
                 name="location"
@@ -103,9 +119,12 @@
                 type="text"
                 placeholder="Insert your location"
               />
+              <p class="form-input-error">
+                Alphanumeric text and must have more than 3 letters.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="postal-group">
               <label for="postal"> Postal Code </label>
               <input
                 name="postal"
@@ -114,39 +133,49 @@
                 type="text"
                 placeholder="Insert your postal code"
               />
+              <p class="form-input-error">
+                Numbers only and must have between 4 and 5 numbers.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="email-group">
               <label for="email"> E-mail </label>
               <input
                 name="email"
                 class="input"
                 id="email"
                 type="text"
-                placeholder="Insert your E-mail"
+                placeholder="mail@mail.com"
               />
+              <p class="form-input-error">It must have a valid email format.</p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="password-group">
               <label for="password"> Password </label>
               <input
                 name="password"
                 class="input"
                 id="password"
                 type="text"
-                placeholder="Insert your Password"
+                placeholder="**********"
               />
+              <p class="form-input-error">
+                At least 8 characters, made up of letters and numbers.
+              </p>
             </div>
 
-            <div class="form-field-text">
+            <div class="form-field-text" id="repeat-group">
               <label for="repeat"> Repeat Password </label>
               <input
                 name="repeat"
                 class="input"
                 id="repeat"
                 type="password"
-                placeholder="Repeat password"
+                placeholder="**********"
               />
+              <p class="form-input-error">
+                At least 8 characters, made up of letters and numbers.
+              </p>
             </div>
           </div>
 
@@ -155,13 +184,17 @@
             <input type="checkbox" />
           </div>
 
+          <div id="message-form" class="message-form">
+            <p>Error: rellena el formulario correctamente</p>
+          </div>
+
           <button id="submitButton" class="button-submit" type="submit">
-            Sign In
+            Register
           </button>
 
           <div class="login-section">
             <p>You already have an account?</p>
-            <a href="../views/login.html">login</a>
+            <a href="./login.html">login</a>
           </div>
         </form>
       </main>

@@ -58,6 +58,18 @@ h1 {
   color: var(--Red);
 }
 
+.form-input-error{
+  font-size:10px;
+  color: var(--Red);
+  display:none;
+}
+
+.form-input-error-show{
+  font-size:10px;
+  color: var(--Red);
+  display:block;
+}
+
 .input-correct {
   border: solid 2px var(--Green);
   color: var(--Green);
@@ -117,6 +129,24 @@ h1 {
   font-weight:bolder;
 }
 
+.message-form{
+  background-color:var(--Red);
+  width:80%;
+  padding:20px;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  display:none;
+}
+
+.message-form-show{
+  background-color:var(--Red);
+  width:80%;
+  padding:20px;
+  border-radius: 10px;
+  margin: 20px auto 20px auto;
+  display: block;
+}
+
 @media only screen and (min-width: 780px) {
   h1 {
     display: none;
@@ -133,8 +163,7 @@ h1 {
 
   .form-area {
     flex-wrap: wrap;
-    gap: 30px;
-    height: 530px;
+    height: 600px;
   }
 
   .logo-01 {
@@ -148,7 +177,7 @@ h1 {
   }
 
   .image-section {
-    width: 50%;
+    width: 40%;
     margin: 0;
     background-image: url("../img/register-img.png");
     align-items: end;
@@ -157,7 +186,7 @@ h1 {
   .main-section {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     gap: 20px;
   }
 
@@ -187,6 +216,7 @@ h1 {
 
   .input {
     padding: 10px;
+    width:250px;
   }
 
   .forgot {
