@@ -16,7 +16,7 @@ body {
   width: 100%;
   height: 20%;
   margin: 0 0 20px 0;
-  background-image: url("../img/login-shadow-image.png");
+  background-image: url("../../assets/img/login-shadow-image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -165,7 +165,7 @@ h1 {
 
   .image-section {
     height: 100vh;
-    background-image: url("../img/login-image.png");
+    background-image: url("../../assets/img/login-image.png");
   }
 
   .main-section {

@@ -1,9 +1,9 @@
-const inputs = document.querySelectorAll(".input");
-const inputEmail = document.getElementById("email");
-const inputPassword = document.getElementById("password");
-const submitButton = document.getElementById("submitButton");
-const errorAlert = document.getElementsByClassName("error-message");
-const arrayError = [];
+var inputs = document.querySelectorAll(".input");
+var inputEmail = document.getElementById("email");
+var inputPassword = document.getElementById("password");
+var submitButton = document.getElementById("submitButton");
+var errorAlert = document.getElementsByClassName("error-message");
+var arrayError = [];
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -99,9 +99,29 @@ function submitEvent(e) {
   let messageError = "";
   e.preventDefault();
   if (fields.email && fields.password) {
-    alert(
-      "Email: " + inputEmail.value + "\n" + "Password: " + inputPassword.value
-    );
+    let url = new URL("https://api-rest-server.vercel.app/login");
+
+    let params = {
+      email: inputEmail.value,
+      password: inputPassword.value,
+    };
+
+    for (let key in params) {
+      url.searchParams.append(key, params[key]);
+    }
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert(`${data.msg}`);
+        } else {
+          alert(`Login Error: ${data.msg}`);
+        }
+      })
+      .catch((error) => {
+        throw new Error(" Petition Error");
+      });
   } else {
     inputs.forEach((input) => {
       input.classList.add("input-error");
