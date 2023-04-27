@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <section class="image-section">
+        <a href="../views/index.html">
+          <img class="arrow" src="../img/arrow.png" />
+        </a>
+        <a href="../views/index.html">
+          <img class="arrow-desktop" src="../img/arrow.png" />
+        </a>
+        <img class="logo" src="../img/logo-rr-2.png" alt="radium rocket02" />
+      </section>
+      <main class="main-section">
+        <a href="./index.html">
+          <img class="logo-02" src="../img/logo-rr-1.png" />
+        </a>
+        <h1>login</h1>
+        <form class="form">
+          <div class="form-area">
+            <div class="form-field-text" id="email-group">
+              <label for="email"> Email </label>
+              <input
+                id="email"
+                name="email"
+                class="input"
+                type="text"
+                placeholder="mail@mail.com"
+              />
+              <p class="form-input-error">It must have a valid email format.</p>
+            </div>
+
+            <div class="form-field-text" id="password-group">
+              <label for="password"> Password </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="**********"
+                class="input"
+              />
+              <p class="form-input-error">
+                At least 8 characters, made up of letters and numbers.
+              </p>
+            </div>
+          </div>
+
+          <div class="forgot">
+            <div>
+              <input id="keep" type="checkbox" />
+              <label for="keep">Keep me sign</label>
+            </div>
+            <a href="">Forgot password?</a>
+          </div>
+
+          <button id="submitButton" class="button-submit" type="submit">
+            login
+          </button>
+
+          <div class="signup-section">
+            <p>You do not have an account?</p>
+            <a href="../views/sign-up.html">sign up</a>
+          </div>
+        </form>
+
+        <div id="message-form" class="message-form">
+          <p>Error: rellena el formulario correctamente</p>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

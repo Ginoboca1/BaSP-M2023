@@ -1,0 +1,72 @@
+:root {
+  --Green: #aace9b;
+  --Blue: #373867;
+  --Grey: #ebecf0;
+  --LightGrey: #f8f6f7;
+  --DarkBlue: #171642;
+  --DarkGreen: #34646f;
+  --RadioColor: #34636e;
+  --Red: #ea6e71;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Blue);
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: var(--Blue);
+  font-weight: 700;
+}
+
+p,
+a {
+  font-weight: 600;
+  line-height: 23px;
+  color: var(--Blue);
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@media only screen and (min-width: 480px) {
+  body {
+    display: flex;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}

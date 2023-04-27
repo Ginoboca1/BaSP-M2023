@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: var(--Blue);
+}
+
+.logo-rr2 {
+  display: none;
+}
+
+.burguer-menu {
+  width: 35px;
+  height: 35px;
+}
+
+.header h1 {
+  margin: 0.7rem auto;
+  color: var(--Green);
+}
+
+@media only screen and (min-width: 480px) {
+  .header {
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding:20px;
+  }
+
+  .burguer-menu {
+    display: none;
+  }
+  
+  .logo-rr2 {
+    display: block;
+    width: 9rem;
+  }
+
+  .header h1 {
+    margin: 0;
+  }
+
+  .logo-rr2 {
+    height:auto;
+    margin-top: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    justify-content: start;
+    height: auto;
+    padding:20px;
+  }
+}

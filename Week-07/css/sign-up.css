@@ -1,0 +1,225 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  width: 100%;
+  margin: 0 0 20px 0;
+  background-image: url("../img/shadow-register-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1.9;
+}
+
+.form {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Green);
+}
+
+.form-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
+  padding: 18px;
+  border-radius: 10px;
+  border: transparent solid 2px;
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+}
+
+.input-error {
+  border: solid 2px var(--Red);
+  color: var(--Red);
+}
+
+.form-input-error{
+  font-size:10px;
+  color: var(--Red);
+  display:none;
+}
+
+.form-input-error-show{
+  font-size:10px;
+  color: var(--Red);
+  display:block;
+}
+
+.input-correct {
+  border: solid 2px var(--Green);
+  color: var(--Green);
+}
+
+.forgot {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-submit {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding: 20px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  width: 50px;
+  margin: 10px 0px 0px 10px;
+}
+
+.arrow-desktop {
+  display: none;
+}
+
+.logo-02 {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.logo-01 {
+  display: none;
+}
+
+
+.login-section{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+
+.login-section p,
+.login-section a{
+  font-size:12px;
+}
+
+.login-section a{
+  text-decoration:underline;
+  font-weight:bolder;
+}
+
+.message-form{
+  background-color:var(--Red);
+  width:80%;
+  padding:20px;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  display:none;
+}
+
+.message-form-show{
+  background-color:var(--Red);
+  width:80%;
+  padding:20px;
+  border-radius: 10px;
+  margin: 20px auto 20px auto;
+  display: block;
+}
+
+@media only screen and (min-width: 780px) {
+  h1 {
+    display: none;
+  }
+
+  .main-container {
+    flex-direction: row-reverse;
+  }
+
+  .form {
+    padding: 0;
+    background-color: white;
+  }
+
+  .form-area {
+    flex-wrap: wrap;
+    height: 600px;
+  }
+
+  .logo-01 {
+    display: block;
+    width: 70px;
+    margin: 0 auto;
+  }
+
+  .logo-02 {
+    margin-right: 10px;
+  }
+
+  .image-section {
+    width: 40%;
+    margin: 0;
+    background-image: url("../img/register-img.png");
+    align-items: end;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .arrow-desktop {
+    display: flex;
+    width: 25px;
+    margin: 20px 0 0 20px;
+  }
+
+  .button-submit {
+    width: 150px;
+    padding: 15px;
+    margin: 30px auto 20px auto;
+    background-color: var(--Green);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  .button-submit:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  .input {
+    padding: 10px;
+    width:250px;
+  }
+
+  .forgot {
+    justify-content: center;
+  }
+}
