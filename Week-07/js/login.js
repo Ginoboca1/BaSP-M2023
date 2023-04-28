@@ -4,9 +4,8 @@ var inputPassword = document.getElementById("password");
 var submitButton = document.getElementById("submitButton");
 var errorAlert = document.getElementsByClassName("error-message");
 var arrayError = [];
-var modal = document.getElementById('modal');
-var modalContent = document.getElementById('modal-content');
-var modalBtnClose = document.getElementById('closeBtn')
+var modal = document.getElementById("modal");
+var modalContent = document.getElementById("modal-content");
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -69,6 +68,10 @@ const validation = (e) => {
         if (e.target.value.length >= 8 && hasLetter && hasNumber) {
           inputPassword.classList.remove("input-error");
           inputPassword.classList.add("input-correct");
+          document
+            .querySelector("#password-group .form-input-error")
+            .classList.remove("form-input-error-show");
+
           fields["password"] = true;
         } else {
           inputPassword.classList.remove("input-correct");
@@ -117,30 +120,26 @@ function submitEvent(e) {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          modal.classList.remove('modal');
-          modal.classList.add('modal-show');
+          modal.classList.remove("modal");
+          modal.classList.add("modal-show");
           modalContent.innerHTML = `
-          <span id="closeBtn" class="close">&times</span>
           <p>${data.msg}</p>
           `;
-          var modalBtnClose = document.getElementById('closeBtn');
-          modalBtnClose.addEventListener('click', () =>{
-            modal.classList.remove('modal-show');
-            modal.classList.add('modal');
-          })
-
+          setTimeout(() => {
+            modal.classList.remove("modal-show");
+            modal.classList.add("modal");
+          }, 2000);
         } else {
-          modal.classList.remove('modal');
-          modal.classList.add('modal-show');
+          modal.classList.remove("modal");
+          modal.classList.add("modal-show");
           modalContent.innerHTML = `
-          <span id="closeBtn" class="close">&times</span>
           <p>${data.msg}</p>
           `;
-          var modalBtnClose = document.getElementById('closeBtn');
-          modalBtnClose.addEventListener('click', () =>{
-            modal.classList.remove('modal-show');
-            modal.classList.add('modal');
-          })
+          var modalBtnClose = document.getElementById("closeBtn");
+          modalBtnClose.addEventListener("click", () => {
+            modal.classList.remove("modal-show");
+            modal.classList.add("modal");
+          });
         }
       })
       .catch((error) => {

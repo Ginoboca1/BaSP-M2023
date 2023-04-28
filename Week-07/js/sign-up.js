@@ -1,6 +1,8 @@
 let form = document.getElementById("form");
 let inputs = document.querySelectorAll("input");
 let submitButton = document.getElementById("submitButton");
+var modal = document.getElementById("modal");
+var modalContent = document.getElementById("modal-content");
 
 let inputName = document.getElementById("name");
 let inputLastName = document.getElementById("lastname");
@@ -450,12 +452,18 @@ function submitEvent(e) {
           let jsonData = JSON.stringify(data);
           localStorage.setItem("FormData", jsonData);
         } else {
-          let messageErrors;
           let errors = data.errors;
           for (i = 0; i < errors.length; i++) {
-            messageErrors += "\n" + data.errors[i].msg;
+            modalContent.innerHTML += `
+            <p>${data.errors[i].msg}</p>
+            `;
           }
-          alert(messageErrors);
+          modal.classList.remove("modal");
+          modal.classList.add("modal-show");
+          setTimeout(() => {
+            modal.classList.remove("modal-show");
+            modal.classList.add("modal");
+          },2000);
         }
       })
       .catch((err) => {
