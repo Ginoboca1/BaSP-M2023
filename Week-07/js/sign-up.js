@@ -309,8 +309,8 @@ let validation = (e) => {
       break;
 
     case "password":
-      let hasLetter = false;
-      let hasNumber = false;
+      var hasLetter = false;
+      var hasNumber = false;
 
       if (e.target.value.length === 0) {
         inputPassword.classList.remove("input-correct");
@@ -423,40 +423,44 @@ function submitEvent(e) {
     fields.password &&
     fields.repeat
   ) {
-    alert(
-      "Name: " +
-        inputName.value +
-        "\n" +
-        "Lastname: " +
-        inputLastName.value +
-        "\n" +
-        "DNI: " +
-        inputId.value +
-        "\n" +
-        "Date: " +
-        inputDate.value +
-        "\n" +
-        "Phone: " +
-        inputPhone.value +
-        "\n" +
-        "Address: " +
-        inputAdress.value +
-        "\n" +
-        "Location: " +
-        inputLocation.value +
-        "\n" +
-        "Postal: " +
-        inputPassword.value +
-        "\n" +
-        "Email: " +
-        inputEmail.value +
-        "\n" +
-        "Password: " +
-        inputPassword.value +
-        "\n" +
-        "Password repeat: " +
-        inputRepeat.value
-    );
+    let url = new URL("https://api-rest-server.vercel.app/signup");
+
+    let params = {
+      name: inputName.value,
+      lastName: inputLastName.value,
+      dni: inputId.value,
+      dob: inputDate.value,
+      phone: inputPhone.value,
+      address: inputAdress.value,
+      city: inputLocation.value,
+      zip: inputPostal.value,
+      email: inputEmail.value,
+      password: inputPassword.value,
+      repeatPassword: inputRepeat.value,
+    };
+
+    for (let key in params) {
+      url.searchParams.append(key, params[key]);
+    }
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          let jsonData = JSON.stringify(data);
+          localStorage.setItem("FormData", jsonData);
+        } else {
+          let messageErrors;
+          let errors = data.errors;
+          for (i = 0; i < errors.length; i++) {
+            messageErrors += "\n" + data.errors[i].msg;
+          }
+          alert(messageErrors);
+        }
+      })
+      .catch((err) => {
+        throw new Error("Request Error");
+      });
   } else {
     inputs.forEach((input) => {
       input.classList.add("input-error");

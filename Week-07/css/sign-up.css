@@ -19,7 +19,7 @@ h1 {
   gap: 33px;
   width: 100%;
   margin: 0 0 20px 0;
-  background-image: url("../img/shadow-register-img.png");
+  background-image: url("../../assets/img/shadow-register-img.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,7 +179,7 @@ h1 {
   .image-section {
     width: 40%;
     margin: 0;
-    background-image: url("../img/register-img.png");
+    background-image: url("../../assets/img/register-img.png");
     align-items: end;
   }
 
