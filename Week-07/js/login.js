@@ -4,6 +4,9 @@ var inputPassword = document.getElementById("password");
 var submitButton = document.getElementById("submitButton");
 var errorAlert = document.getElementsByClassName("error-message");
 var arrayError = [];
+var modal = document.getElementById('modal');
+var modalContent = document.getElementById('modal-content');
+var modalBtnClose = document.getElementById('closeBtn')
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -114,9 +117,30 @@ function submitEvent(e) {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          alert(`${data.msg}`);
+          modal.classList.remove('modal');
+          modal.classList.add('modal-show');
+          modalContent.innerHTML = `
+          <span id="closeBtn" class="close">&times</span>
+          <p>${data.msg}</p>
+          `;
+          var modalBtnClose = document.getElementById('closeBtn');
+          modalBtnClose.addEventListener('click', () =>{
+            modal.classList.remove('modal-show');
+            modal.classList.add('modal');
+          })
+
         } else {
-          alert(`Login Error: ${data.msg}`);
+          modal.classList.remove('modal');
+          modal.classList.add('modal-show');
+          modalContent.innerHTML = `
+          <span id="closeBtn" class="close">&times</span>
+          <p>${data.msg}</p>
+          `;
+          var modalBtnClose = document.getElementById('closeBtn');
+          modalBtnClose.addEventListener('click', () =>{
+            modal.classList.remove('modal-show');
+            modal.classList.add('modal');
+          })
         }
       })
       .catch((error) => {
