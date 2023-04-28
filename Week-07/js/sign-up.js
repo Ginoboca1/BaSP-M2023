@@ -404,6 +404,13 @@ inputs.forEach((input) => {
   };
 });
 
+var formDate = (date) => {
+  console.log(date);
+  let dateSplit = date.split("-");
+  console.log(dateSplit[2] + "/" + dateSplit[1] + "/" + dateSplit[0])
+  return dateSplit[1] + "/" + dateSplit[2] + "/" + dateSplit[0]
+};
+
 inputs.forEach((input) => {
   input.addEventListener("blur", validation);
 });
@@ -431,7 +438,7 @@ function submitEvent(e) {
       name: inputName.value,
       lastName: inputLastName.value,
       dni: inputId.value,
-      dob: inputDate.value,
+      dob: formDate(inputDate.value),
       phone: inputPhone.value,
       address: inputAdress.value,
       city: inputLocation.value,
@@ -449,6 +456,13 @@ function submitEvent(e) {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
+          modalContent.innerHTML = `<p>${data.msg}</p>`;
+          modal.classList.remove("modal");
+          modal.classList.add("modal-show");
+          setTimeout(() => {
+            modal.classList.remove("modal-show");
+            modal.classList.add("modal");
+          }, 2000);
           let jsonData = JSON.stringify(data);
           localStorage.setItem("FormData", jsonData);
         } else {
@@ -463,7 +477,7 @@ function submitEvent(e) {
           setTimeout(() => {
             modal.classList.remove("modal-show");
             modal.classList.add("modal");
-          },2000);
+          }, 10000);
         }
       })
       .catch((err) => {
