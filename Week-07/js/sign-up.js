@@ -405,10 +405,8 @@ inputs.forEach((input) => {
 });
 
 var formDate = (date) => {
-  console.log(date);
   let dateSplit = date.split("-");
-  console.log(dateSplit[2] + "/" + dateSplit[1] + "/" + dateSplit[0])
-  return dateSplit[1] + "/" + dateSplit[2] + "/" + dateSplit[0]
+  return dateSplit[1] + "/" + dateSplit[2] + "/" + dateSplit[0];
 };
 
 inputs.forEach((input) => {
@@ -463,8 +461,14 @@ function submitEvent(e) {
             modal.classList.remove("modal-show");
             modal.classList.add("modal");
           }, 2000);
+
           let jsonData = JSON.stringify(data);
           localStorage.setItem("FormData", jsonData);
+          let localStorageData = localStorage.getItem('FormData');
+          let dataObj = JSON.parse(localStorageData);
+          signData = dataObj.data;
+          
+
         } else {
           let errors = data.errors;
           for (i = 0; i < errors.length; i++) {
@@ -477,11 +481,11 @@ function submitEvent(e) {
           setTimeout(() => {
             modal.classList.remove("modal-show");
             modal.classList.add("modal");
-          }, 10000);
+          }, 2000);
         }
       })
-      .catch((err) => {
-        throw new Error("Request Error");
+      .catch(() => {
+        throw new Error('Petition Error');
       });
   } else {
     inputs.forEach((input) => {
@@ -495,6 +499,6 @@ function submitEvent(e) {
       document
         .getElementById("message-form")
         .classList.remove("message-form-show");
-    }, 1000);
+    }, 5000);
   }
 }

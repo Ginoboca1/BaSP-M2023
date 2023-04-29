@@ -45,7 +45,7 @@ const validation = (e) => {
       let hasLetter = false;
       let hasNumber = false;
 
-      if (e.target.value.length === 0) {
+      if (e.target.value.length === 0 || e.target.value  === null) {
         inputPassword.classList.remove("input-correct");
         inputPassword.classList.add("input-error");
         document
@@ -135,11 +135,10 @@ function submitEvent(e) {
           modalContent.innerHTML = `
           <p>${data.msg}</p>
           `;
-          var modalBtnClose = document.getElementById("closeBtn");
-          modalBtnClose.addEventListener("click", () => {
+          setTimeout(() => {
             modal.classList.remove("modal-show");
             modal.classList.add("modal");
-          });
+          }, 2000);
         }
       })
       .catch((error) => {
@@ -157,13 +156,12 @@ function submitEvent(e) {
       document
         .getElementById("message-form")
         .classList.remove("message-form-show");
-    }, 2000);
+    }, 5000);
 
     arrayError.forEach((error) => {
       if (error.length !== 0) {
         messageError += error + "\n";
       }
-      alert(messageError);
     });
   }
 }
