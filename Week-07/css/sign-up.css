@@ -214,7 +214,94 @@ h1 {
   gap:20px;
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 768px) {
+  h1 {
+    display: none;
+  }
+
+  .fields-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .main-container {
+    flex-direction: row-reverse;
+  }
+
+  .form {
+    padding: 0;
+    background-color: white;
+  }
+
+  .form-area {
+   flex-direction:column;
+   justify-content:space-around;
+  }
+
+  .logo-01 {
+    display: block;
+    width: 70px;
+    margin: 0 auto;
+  }
+
+  .logo-02 {
+    margin-right: 10px;
+  }
+
+  .image-section {
+    width: 40%;
+    margin: 0;
+    background-image: url("../../assets/img/register-img.png");
+    align-items: end;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .arrow-desktop {
+    display: flex;
+    width: 25px;
+    margin: 20px 0 0 20px;
+  }
+
+  .button-submit {
+    width: 150px;
+    padding: 15px;
+    margin: 30px auto 20px auto;
+    background-color: var(--Green);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  .button-submit:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  .input {
+    padding: 10px;
+    min-width:150px;
+  }
+
+  .forgot {
+    justify-content: center;
+  }
+
+  .form-input-error{
+    font-size:8px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   h1 {
     display: none;
   }

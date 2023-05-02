@@ -90,18 +90,14 @@ const validation = (e) => {
       break;
   }
   if (fields.email && fields.password) {
-    console.log(fields);
-    console.log('Funciona!')
     submitButton.disabled = false;
-  } else{
+  } else {
     submitButton.disabled = true;
   }
 };
 
-
 inputs.forEach((input) => {
   input.addEventListener("blur", validation);
-  console.log(fields)
 });
 
 inputs.forEach((input) => {
@@ -114,12 +110,9 @@ inputs.forEach((input) => {
   };
 });
 
-submitButton.disabled = true;
-
-
 submitButton.addEventListener("click", submitEvent);
 
-function submitEvent(e){
+function submitEvent(e) {
   let messageError = "";
   e.preventDefault();
   if (fields.email && fields.password) {
@@ -185,4 +178,4 @@ function submitEvent(e){
       }
     });
   }
-};
+}
