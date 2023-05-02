@@ -4,7 +4,7 @@ let submitButton = document.getElementById("submitButton");
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modal-content");
 
-var addressParap = document.querySelector("#address-group .form-input-error")
+var addressParap = document.querySelector("#address-group .form-input-error");
 
 let inputName = document.getElementById("name");
 let inputLastName = document.getElementById("lastname");
@@ -486,14 +486,30 @@ function submitEvent(e) {
   }
 }
 
-let name = localStorage.getItem("name");
-let lastname = localStorage.getItem("lastName");
-let dni = localStorage.getItem("dni");
-let dob = localStorage.getItem("dob");
-let phone = localStorage.getItem("phone");
-let address = localStorage.getItem("address");
-let city = localStorage.getItem("city");
-let zip = localStorage.getItem("zip");
-let email = localStorage.getItem("email");
-let password = localStorage.getItem("password");
-let repeatPassword = localStorage.getItem("repeatPassword");
+window.onload = () => {
+  let localStorageData = localStorage.getItem("FormData");
+  let dataObj = JSON.parse(localStorageData);
+  let data = dataObj.data;
+  let name = data.name;
+  let lastname = data.lastName;
+  let dni = data.dni;
+  let phone = data.phone;
+  let address = data.address;
+  let mail = data.email;
+  let password = data.password;
+  let repeatPassword = data.repeatPassword;
+  let location = data.city;
+  let dob = data.dob;
+  let zip = data.zip;
+  inputName.value = name;
+  inputLastName.value = lastname;
+  inputId.value = dni;
+  inputDate.value = dob;
+  inputPostal.value = zip;
+  inputLocation.value = location;
+  inputPassword.value = password;
+  inputPhone.value = phone;
+  inputEmail.value = mail;
+  inputAdress.value = address
+  inputRepeat.value = repeatPassword;
+};
