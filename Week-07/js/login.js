@@ -6,6 +6,7 @@ var errorAlert = document.getElementsByClassName("error-message");
 var arrayError = [];
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modal-content");
+var inputsError = document.querySelectorAll(".form-input-error");
 
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -45,7 +46,7 @@ const validation = (e) => {
       let hasLetter = false;
       let hasNumber = false;
 
-      if (e.target.value.length === 0 || e.target.value  === null) {
+      if (e.target.value.length === 0 || e.target.value === null) {
         inputPassword.classList.remove("input-correct");
         inputPassword.classList.add("input-error");
         document
@@ -96,12 +97,16 @@ inputs.forEach((input) => {
   input.onfocus = () => {
     arrayError = [];
     input.classList.remove("input-error", "input-correct");
+    inputsError.forEach((inputError) => {
+      inputError.classList.remove("form-input-error-show");
+    });
   };
 });
 
+
 submitButton.addEventListener("click", submitEvent);
 
-function submitEvent(e) {
+function submitEvent(e){
   let messageError = "";
   e.preventDefault();
   if (fields.email && fields.password) {
@@ -148,6 +153,10 @@ function submitEvent(e) {
     inputs.forEach((input) => {
       input.classList.add("input-error");
     });
+    inputsError.forEach((inputError) => {
+      inputError.classList.add("form-input-error-show");
+    });
+
     document.getElementById("message-form").classList.add("message-form-show");
     setTimeout(() => {
       inputs.forEach((input) => {
@@ -164,4 +173,4 @@ function submitEvent(e) {
       }
     });
   }
-}
+};

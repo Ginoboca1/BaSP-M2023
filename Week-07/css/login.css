@@ -122,6 +122,20 @@ h1 {
   border-radius: 10px;
   text-transform: uppercase;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background-color:var(--Green);
+}
+
+.button-submit-disabled{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding: 20px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color:var(--Grey);
 }
 
 .signup-section {
@@ -242,6 +256,14 @@ h1 {
     margin: 30px auto;
     width: 150px;
     background-color: var(--Green);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .button-submit-disabled {
+    margin: 30px auto;
+    width: 150px;
+    background-color: var(--Grey);
     cursor: pointer;
     transition: 0.2s;
   }

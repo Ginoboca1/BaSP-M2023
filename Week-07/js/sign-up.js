@@ -4,6 +4,8 @@ let submitButton = document.getElementById("submitButton");
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modal-content");
 
+var addressParap = document.querySelector("#address-group .form-input-error")
+
 let inputName = document.getElementById("name");
 let inputLastName = document.getElementById("lastname");
 let inputId = document.getElementById("dni");
@@ -15,6 +17,7 @@ let inputPhone = document.getElementById("phone");
 let inputEmail = document.getElementById("email");
 let inputPassword = document.getElementById("password");
 let inputRepeat = document.getElementById("repeat");
+var inputErrors = document.querySelectorAll(".form-input-error");
 
 let emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 let arrayError = [];
@@ -164,9 +167,7 @@ let validation = (e) => {
       if (e.target.value.length === 0 || e.target.value.length < 5) {
         inputAdress.classList.remove("input-correct");
         inputAdress.classList.add("input-error");
-        document
-          .querySelector("#adress-group .form-input-error")
-          .classList.add("form-input-error-show");
+        addressParap.classList.add("form-input-error-show");
         arrayError[5] = "Adress required";
       } else {
         var hasSpecialCharacter = false;
@@ -224,9 +225,7 @@ let validation = (e) => {
           inputAdress.classList.remove("input-correct");
           inputAdress.classList.add("input-error");
           fields["address"] = false;
-          document
-            .querySelector("#address-group .form-input-error")
-            .classList.add("form-input-error-show");
+          addressParap.classList.add("form-input-error-show");
         }
       }
       break;
@@ -273,10 +272,13 @@ let validation = (e) => {
           fields["postal"] = true;
         } else {
           inputPostal.classList.add("input-error");
-          fields["postal"] = false;
+          document
+            .querySelector("#postal-group .form-input-error")
+            .classList.remove("form-input-error");
           document
             .querySelector("#postal-group .form-input-error")
             .classList.add("form-input-error-show");
+          fields["postal"] = false;
         }
       } else {
         inputPostal.classList.add("input-error");
@@ -302,7 +304,6 @@ let validation = (e) => {
       } else {
         inputEmail.classList.remove("input-correct");
         inputEmail.classList.add("input-error");
-        fields["email"] = false;
         document
           .querySelector("#email-group .form-input-error")
           .classList.add("form-input-error-show");
@@ -354,10 +355,7 @@ let validation = (e) => {
       break;
 
     case "repeat":
-      var hasLetter = false;
-      var hasNumber = false;
-
-      if (e.target.value.length === 0) {
+      if (e.target.value !== inputPassword.value) {
         inputRepeat.classList.remove("input-correct");
         inputRepeat.classList.add("input-error");
         document
@@ -365,34 +363,12 @@ let validation = (e) => {
           .classList.add("form-input-error-show");
         arrayError[12] = "Password requerid";
       } else {
-        for (let i = 0; i < e.target.value.length; i++) {
-          let charCode = e.target.value.charCodeAt(i);
-          if (charCode >= 48 && charCode <= 57) {
-            hasNumber = true;
-          } else if (
-            (charCode >= 65 && charCode <= 90) ||
-            (charCode >= 97 && charCode <= 122)
-          ) {
-            hasLetter = true;
-          }
-        }
-        if (e.target.value.length >= 8 && hasLetter && hasNumber) {
-          inputRepeat.classList.remove("input-error");
-          inputRepeat.classList.add("input-correct");
-          fields["repeat"] = true;
-          document
-            .querySelector("#repeat-group .form-input-error")
-            .classList.remove("form-input-error-show");
-        } else {
-          inputRepeat.classList.remove("input-correct");
-          inputRepeat.classList.add("input-error");
-          fields["repeat"] = false;
-          document
-            .querySelector("#repeat-group .form-input-error")
-            .classList.add("form-input-error-show");
-          arrayError[13] =
-            "password may have contain 8 characters (letters, numbers)";
-        }
+        inputRepeat.classList.remove("input-error");
+        inputRepeat.classList.add("input-correct");
+        fields["repeat"] = true;
+        document
+          .querySelector("#repeat-group .form-input-error")
+          .classList.remove("form-input-error-show");
       }
       break;
   }
@@ -400,7 +376,14 @@ let validation = (e) => {
 
 inputs.forEach((input) => {
   input.onfocus = () => {
-    input.classList.remove("input-error", "input-correct");
+    input.classList.remove(
+      "input-error",
+      "input-correct",
+      "form-input-error-show"
+    );
+    inputErrors.forEach((inputError) => {
+      inputError.classList.remove("form-input-error-show");
+    });
   };
 });
 
@@ -464,11 +447,8 @@ function submitEvent(e) {
 
           let jsonData = JSON.stringify(data);
           localStorage.setItem("FormData", jsonData);
-          let localStorageData = localStorage.getItem('FormData');
+          let localStorageData = localStorage.getItem("FormData");
           let dataObj = JSON.parse(localStorageData);
-          signData = dataObj.data;
-          
-
         } else {
           let errors = data.errors;
           for (i = 0; i < errors.length; i++) {
@@ -485,11 +465,14 @@ function submitEvent(e) {
         }
       })
       .catch(() => {
-        throw new Error('Petition Error');
+        throw new Error("Petition Error");
       });
   } else {
     inputs.forEach((input) => {
       input.classList.add("input-error");
+      inputErrors.forEach((inputError) => {
+        inputError.classList.add("form-input-error-show");
+      });
     });
     document.getElementById("message-form").classList.add("message-form-show");
     setTimeout(() => {
@@ -502,3 +485,15 @@ function submitEvent(e) {
     }, 5000);
   }
 }
+
+let name = localStorage.getItem("name");
+let lastname = localStorage.getItem("lastName");
+let dni = localStorage.getItem("dni");
+let dob = localStorage.getItem("dob");
+let phone = localStorage.getItem("phone");
+let address = localStorage.getItem("address");
+let city = localStorage.getItem("city");
+let zip = localStorage.getItem("zip");
+let email = localStorage.getItem("email");
+let password = localStorage.getItem("password");
+let repeatPassword = localStorage.getItem("repeatPassword");
