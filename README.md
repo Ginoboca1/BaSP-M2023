@@ -22,7 +22,6 @@ Forms validations without regex and views pages connection.
 
 ## Week 07
 Fetch API consumition for form validations
-BaSP-W07-2023: Short description
 
 [Week-02](https://ginoboca1.github.io/BaSP-M2023/Week-02/index.html).
 [Week-03](https://ginoboca1.github.io/BaSP-M2023/Week-03/index.html).

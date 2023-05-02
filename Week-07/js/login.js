@@ -89,6 +89,14 @@ const validation = (e) => {
   }
 };
 
+if(fields.email && fields.password){
+  submitButton.classList.remove('button-submit');
+  submitButton.classList.add('button-submit-active');
+} else{
+  submitButton.classList.remove('button-submit-active');
+  submitButton.classList.add('button-submit');
+}
+
 inputs.forEach((input) => {
   input.addEventListener("blur", validation);
 });
@@ -165,7 +173,7 @@ function submitEvent(e){
       document
         .getElementById("message-form")
         .classList.remove("message-form-show");
-    }, 5000);
+    }, 2000);
 
     arrayError.forEach((error) => {
       if (error.length !== 0) {

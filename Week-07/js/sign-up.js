@@ -125,7 +125,7 @@ let validation = (e) => {
       break;
 
     case "date":
-      if (e.target.value.length <= 0) {
+      if (e.target.value.length <= 0 || e.target.value === null) {
         inputDate.classList.add("input-error");
         fields["date"] = false;
         document
@@ -262,7 +262,6 @@ let validation = (e) => {
           }
         }
       }
-
       break;
 
     case "postal":
@@ -447,8 +446,7 @@ function submitEvent(e) {
 
           let jsonData = JSON.stringify(data);
           localStorage.setItem("FormData", jsonData);
-          let localStorageData = localStorage.getItem("FormData");
-          let dataObj = JSON.parse(localStorageData);
+          
         } else {
           let errors = data.errors;
           for (i = 0; i < errors.length; i++) {

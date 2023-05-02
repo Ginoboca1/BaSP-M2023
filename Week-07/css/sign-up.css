@@ -60,14 +60,13 @@ h1 {
 
 .form-input-error{
   font-size:10px;
-  color: var(--Red);
-  display:none;
+  visibility:hidden;
+  display:block;
 }
 
 .form-input-error-show{
-  font-size:10px;
+  visibility:visible;
   color: var(--Red);
-  display:block;
 }
 
 .input-correct {
@@ -94,6 +93,17 @@ h1 {
   text-transform: uppercase;
 }
 
+.button-submit-disabled{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding: 20px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-transform: uppercase;
+}
 
 .arrow {
   width: 50px;
@@ -198,9 +208,21 @@ h1 {
   cursor: pointer;
 }
 
+.fields-container{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
 @media only screen and (min-width: 780px) {
   h1 {
     display: none;
+  }
+
+  .fields-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
   }
 
   .main-container {
@@ -213,8 +235,8 @@ h1 {
   }
 
   .form-area {
-    flex-wrap: wrap;
-    height: 600px;
+   flex-direction:row;
+   justify-content:space-around;
   }
 
   .logo-01 {
@@ -272,5 +294,9 @@ h1 {
 
   .forgot {
     justify-content: center;
+  }
+
+  .form-input-error{
+    font-size:8px;
   }
 }
