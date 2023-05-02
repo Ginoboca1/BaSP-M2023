@@ -4,7 +4,7 @@ let submitButton = document.getElementById("submitButton");
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modal-content");
 
-var addressParap = document.querySelector("#address-group .form-input-error");
+let addressParap = document.querySelector("#address-group .form-input-error");
 
 let inputName = document.getElementById("name");
 let inputLastName = document.getElementById("lastname");

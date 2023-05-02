@@ -20,6 +20,7 @@ const validation = (e) => {
     case "email":
       if (e.target.value == null || e.target.value == "") {
         inputEmail.classList.add("input-error");
+        fields["email"] = false;
         document
           .querySelector("#email-group .form-input-error")
           .classList.add("form-input-error-show");
@@ -49,6 +50,7 @@ const validation = (e) => {
       if (e.target.value.length === 0 || e.target.value === null) {
         inputPassword.classList.remove("input-correct");
         inputPassword.classList.add("input-error");
+        fields["password"] = false;
         document
           .querySelector("#password-group .form-input-error")
           .classList.add("form-input-error-show");
@@ -87,18 +89,19 @@ const validation = (e) => {
       }
       break;
   }
+  if (fields.email && fields.password) {
+    console.log(fields);
+    console.log('Funciona!')
+    submitButton.disabled = false;
+  } else{
+    submitButton.disabled = true;
+  }
 };
 
-if(fields.email && fields.password){
-  submitButton.classList.remove('button-submit');
-  submitButton.classList.add('button-submit-active');
-} else{
-  submitButton.classList.remove('button-submit-active');
-  submitButton.classList.add('button-submit');
-}
 
 inputs.forEach((input) => {
   input.addEventListener("blur", validation);
+  console.log(fields)
 });
 
 inputs.forEach((input) => {
@@ -111,6 +114,8 @@ inputs.forEach((input) => {
   };
 });
 
+submitButton.disabled = true;
+
 
 submitButton.addEventListener("click", submitEvent);
 
@@ -119,7 +124,6 @@ function submitEvent(e){
   e.preventDefault();
   if (fields.email && fields.password) {
     let url = new URL("https://api-rest-server.vercel.app/login");
-
     let params = {
       email: inputEmail.value,
       password: inputPassword.value,

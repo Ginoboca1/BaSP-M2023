@@ -250,18 +250,12 @@ h1 {
   .button-submit {
     margin: 30px auto;
     width: 150px;
-    background-color: var(--Grey);
-    cursor: pointer;
-    transition: 0.2s;
-  }
-
-  .button-submit-active {
-    margin: 30px auto;
-    width: 150px;
     background-color: var(--Green);
     cursor: pointer;
     transition: 0.2s;
   }
+
+
 
   .button-submit:hover {
     background-color: grey;

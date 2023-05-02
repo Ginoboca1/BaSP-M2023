@@ -21,7 +21,7 @@ JavaScript logic exercises about variables, conditionals, arrays, for loop, and 
 Forms validations without regex and views pages connection.
 
 ## Week 07
-Fetch API consumition for form validations
+Form validations with Fetch API consumition.
 
 [Week-02](https://ginoboca1.github.io/BaSP-M2023/Week-02/index.html).
 [Week-03](https://ginoboca1.github.io/BaSP-M2023/Week-03/index.html).
@@ -29,5 +29,6 @@ Fetch API consumition for form validations
 [Week-05](https://ginoboca1.github.io/BaSP-M2023/Week-05/index.html).
 [Week-06](https://ginoboca1.github.io/BaSP-M2023/Week-06/views/index.html).
 [Week-07](https://ginoboca1.github.io/BaSP-M2023/Week-07/views/index.html).
+
 ### Authors
 -Gino Bocacorsicopicolino
